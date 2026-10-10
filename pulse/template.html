@@ -1,0 +1,469 @@
+<title>MoveInSync Ratings Pulse</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass:wght@500;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: one reading column (answer, plan, evidence, method); figures sit on raised cards inside it. */
+:root{
+  --bg:#f2f5f6; --surface:#fbfcfc; --ink:#10171c; --ink2:#46525b; --muted:#6f7b84; --hair:#dfe5e8; --axis:#c0c9ce;
+  --accent:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --deemph:#b5bec4; --crit:#d03b3b; --good:#0b7a0b; --wash:#e6eef8; --tip:#10171c; --tipink:#fbfcfc;
+  --display:"Overpass",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0e1113; --surface:#171b1e; --ink:#eef1f2; --ink2:#b9c2c8; --muted:#8a949c; --hair:#262c30; --axis:#39424a;
+  --accent:#3987e5; --s2:#d95926; --s3:#199e70; --deemph:#4a545b; --crit:#e66767; --good:#0ca30c; --wash:#172534; --tip:#eef1f2; --tipink:#10171c; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#0e1113; --surface:#171b1e; --ink:#eef1f2; --ink2:#b9c2c8; --muted:#8a949c; --hair:#262c30; --axis:#39424a;
+  --accent:#3987e5; --s2:#d95926; --s3:#199e70; --deemph:#4a545b; --crit:#e66767; --good:#0ca30c; --wash:#172534; --tip:#eef1f2; --tipink:#10171c; color-scheme:dark }
+
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+.page{max-width:980px;margin:0 auto;padding-inline:20px;padding-block:36px 72px;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3,.num,.eyebrow,.chip,th{font-family:var(--display)}
+h1{font-size:clamp(1.5rem,3.6vw,2.1rem);font-weight:800;line-height:1.15;margin:0;text-wrap:balance}
+h2{font-size:1.45rem;font-weight:800;line-height:1.2;margin:0;text-wrap:balance}
+h3{font-size:1.12rem;font-weight:700;line-height:1.3;margin:0;text-wrap:balance}
+p{margin:0;max-width:68ch}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.stack{display:flex;flex-direction:column;gap:14px}
+.stack-lg{display:flex;flex-direction:column;gap:28px}
+.small{font-size:.9rem;color:var(--ink2)}
+.muted{color:var(--muted)}
+
+/* answer */
+.answer{display:flex;flex-direction:column;gap:18px}
+.hero{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 22px}
+.hero .num{font-size:clamp(3.4rem,11vw,5.6rem);font-weight:800;line-height:.95;letter-spacing:-.02em}
+.hero .to{font-size:clamp(1.1rem,2.6vw,1.45rem);font-weight:700;font-family:var(--display);color:var(--ink2);max-width:22ch;line-height:1.25}
+.lede{font-size:1.16rem;line-height:1.5;max-width:64ch}
+.byline{font-size:.88rem;color:var(--muted);max-width:72ch}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair);border-radius:10px;overflow:hidden}
+.tile{background:var(--surface);padding:16px 16px 18px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile .label{font-size:.86rem;color:var(--ink2);line-height:1.3}
+.tile .num{font-size:1.9rem;font-weight:800;line-height:1.05}
+.tile .ctx{font-size:.84rem;color:var(--muted);line-height:1.3}
+@media (max-width:760px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* plan */
+.phase{display:flex;flex-direction:column;gap:12px}
+.phase-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;border-bottom:2px solid var(--ink);padding-bottom:6px}
+.phase-head .small{margin:0}
+.action{background:var(--surface);border:1px solid var(--hair);border-radius:10px}
+.action>summary{list-style:none;cursor:pointer;padding:16px 18px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 14px;align-items:start}
+.action>summary::-webkit-details-marker{display:none}
+.action .id{font-family:var(--display);font-weight:800;font-size:.84rem;color:var(--tipink);background:var(--ink);border-radius:4px;padding:3px 7px 1px;line-height:1.4;margin-top:2px}
+.action .meta{grid-column:2;font-size:.88rem;color:var(--ink2);display:flex;flex-wrap:wrap;gap:2px 16px}
+.action .meta b{font-weight:600;color:var(--ink)}
+.action .tog{font-family:var(--display);font-size:.8rem;font-weight:700;color:var(--accent);white-space:nowrap;margin-top:4px}
+.action[open] .tog .o,.action:not([open]) .tog .c{display:none}
+.action .body{padding:0 18px 18px;display:flex;flex-direction:column;gap:14px;border-top:1px solid var(--hair);padding-top:16px}
+.action .body ul{margin:0;padding-left:1.15em;display:flex;flex-direction:column;gap:6px;max-width:72ch}
+.kv{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px 24px}
+.kv>div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.kv .k,.body .k{font-family:var(--display);font-size:.78rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:700px){.kv{grid-template-columns:minmax(0,1fr)}.action>summary{grid-template-columns:auto minmax(0,1fr)}.action .tog{grid-column:2}}
+.btn{font-family:var(--display);font-weight:700;font-size:.82rem;color:var(--ink);background:var(--surface);border:1px solid var(--axis);border-radius:6px;padding:6px 10px 4px;cursor:pointer}
+.btn:hover{border-color:var(--ink)}
+
+/* figures */
+.finding{display:flex;flex-direction:column;gap:14px}
+.fig{background:var(--surface);border:1px solid var(--hair);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.fig-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 16px}
+.fig-title{font-family:var(--display);font-weight:700;font-size:.98rem}
+.fig-note{font-size:.84rem;color:var(--muted);max-width:none}
+.legend{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.86rem;color:var(--ink2)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.legend i.line{height:3px;width:16px;border-radius:2px;vertical-align:3px}
+.rows{display:flex;flex-direction:column;gap:9px}
+.row{display:grid;grid-template-columns:minmax(0,15.5rem) minmax(0,1fr) 6.2rem;gap:10px;align-items:center;font-size:.92rem}
+.row .lab{line-height:1.25;min-width:0}
+.row .track{height:14px;position:relative;min-width:0}
+.row .bar{height:14px;border-radius:0 4px 4px 0;min-width:2px;background:var(--accent)}
+.row .val{font-variant-numeric:tabular-nums;color:var(--ink2);text-align:right;white-space:nowrap}
+.row .val b{color:var(--ink);font-weight:600}
+.row.hl .lab{font-weight:600}
+@media (max-width:640px){.row{grid-template-columns:minmax(0,1fr) 5.6rem;gap:3px 10px}.row .lab{grid-column:1/-1}.row .track{grid-column:1}}
+.split{display:flex;height:22px;gap:2px;border-radius:4px;overflow:hidden}
+.split div{min-width:2px}
+svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--body);font-size:12px;fill:var(--muted)}
+svg .lbl{fill:var(--ink2);font-size:12.5px}
+svg .strong{fill:var(--ink);font-weight:600}
+.plot{position:relative;min-width:0}
+.tip{position:absolute;pointer-events:none;background:var(--tip);color:var(--tipink);border-radius:6px;padding:7px 10px;font-size:.84rem;line-height:1.35;white-space:nowrap;z-index:5;transform:translate(-50%,-100%);margin-top:-10px}
+.tip b{font-weight:600}
+.tip i{display:inline-block;width:10px;height:3px;border-radius:2px;margin-right:6px;vertical-align:3px}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--hair);vertical-align:top}
+th{font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.scroll{overflow-x:auto}
+.quote{border-left:3px solid var(--axis);padding-left:14px;color:var(--ink2);font-style:italic;max-width:62ch}
+.quote span{font-style:normal;color:var(--muted);font-size:.86rem}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.flag{display:inline-flex;align-items:center;gap:6px;font-family:var(--display);font-weight:700;font-size:.8rem;border:1px solid var(--crit);border-radius:4px;padding:2px 7px 0;color:var(--ink)}
+.flag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--crit)}
+.alerts{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none}
+.alerts li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start;font-size:.95rem}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.86rem}
+pre{background:var(--surface);border:1px solid var(--hair);border-radius:8px;padding:12px 14px;margin:0;overflow-x:auto}
+footer{border-top:1px solid var(--hair);padding-top:18px;font-size:.86rem;color:var(--muted)}
+@media print{
+  body{font-size:11.5pt} .page{max-width:none;padding-block:0;gap:30px} .btn,.tog{display:none}
+  .fig,.action>summary,.kv,.tiles,.row,tr,.quote{break-inside:avoid} h2,h3,.phase-head{break-after:avoid}
+  .scroll{overflow:visible} table{font-size:9.5pt} th,td{padding:5px 6px} th{letter-spacing:0;white-space:normal} td.n,th.n{white-space:normal}
+}
+</style>
+
+<div class="page">
+
+<header class="answer">
+  <div class="eyebrow" id="eyebrow"></div>
+  <h1>&ldquo;How are our Play Store ratings?&rdquo;</h1>
+  <p class="byline" id="byline"></p>
+  <div class="hero"><div class="num" id="score"></div><div class="to" id="heroto"></div></div>
+  <p class="lede" id="lede"></p>
+  <div class="tiles" id="tiles"></div>
+</header>
+
+<section class="stack-lg" id="plan">
+  <div class="stack">
+    <h2>What to do, in order</h2>
+    <p>Ten actions in three phases. The first three need no roadmap change and can start tomorrow morning. Each one lists the reviews behind it, the exact changes, the first step and the number that says it worked.</p>
+    <div><button class="btn" id="toggle-all" type="button">Open all actions</button></div>
+  </div>
+  <div id="phases" class="stack-lg"></div>
+</section>
+
+<section class="stack-lg" id="effect">
+  <div class="stack">
+    <h2>What the plan should be worth</h2>
+    <p id="effect-lede"></p>
+  </div>
+  <div class="fig"><div class="scroll"><table id="impact"></table></div>
+  <p class="fig-note" id="impact-note"></p></div>
+</section>
+
+<section class="stack-lg" id="why">
+  <div class="stack">
+    <h2>Why the rating is where it is</h2>
+    <p id="why-lede"></p>
+  </div>
+
+  <div class="finding">
+    <h3>The score is good. The one-star rate is not.</h3>
+    <p id="f1"></p>
+    <div class="fig"><div class="fig-head"><div class="fig-title">Share of all ratings that are one star</div><div class="fig-note" id="bench-note"></div></div>
+      <div class="rows" id="bench"></div></div>
+  </div>
+
+  <div class="finding">
+    <h3>A few hundred people a year write the reviews everyone else reads</h3>
+    <p id="f2"></p>
+    <div class="fig"><div class="fig-head"><div class="fig-title">Average star rating of written reviews, by month</div><button class="btn" type="button" data-table="t-month">Table</button></div>
+      <div class="plot" id="c-month"></div><div class="scroll" id="t-month" hidden></div></div>
+  </div>
+
+  <div class="finding">
+    <h3>Four in five complaints are about the app, not the cab</h3>
+    <p id="f3"></p>
+    <div class="fig"><div class="fig-head"><div class="fig-title" id="themes-title"></div><div class="legend" id="themes-legend"></div></div>
+      <div class="rows" id="themes"></div>
+      <p class="fig-note">A review can name more than one reason, so shares add to more than 100%.</p></div>
+  </div>
+
+  <div class="finding">
+    <h3>Getting in is the biggest problem, and it arrives with releases</h3>
+    <p id="f4"></p>
+    <div class="fig"><div class="fig-head"><div class="fig-title">Low-star reviews per month, by reason</div><button class="btn" type="button" data-table="t-epi">Table</button></div>
+      <div class="legend" id="epi-legend"></div>
+      <div class="plot" id="c-epi"></div><div class="scroll" id="t-epi" hidden></div>
+      <p class="fig-note" id="epi-note"></p></div>
+    <div class="fig"><div class="fig-head"><div class="fig-title">One-star share of written reviews, by app release (last 12 months)</div><button class="btn" type="button" data-table="t-ver">Table</button></div>
+      <div class="plot" id="c-ver"></div><div class="scroll" id="t-ver" hidden></div>
+      <p class="fig-note" id="ver-note"></p></div>
+  </div>
+
+  <div class="finding">
+    <h3>Reviews stopped getting answers in mid-2024</h3>
+    <p id="f5"></p>
+    <div class="fig"><div class="fig-head"><div class="fig-title">Share of reviews that received a developer reply, by month written</div><button class="btn" type="button" data-table="t-rep">Table</button></div>
+      <div class="plot" id="c-rep"></div><div class="scroll" id="t-rep" hidden></div></div>
+  </div>
+
+  <div class="finding">
+    <h3>The way the app asks for ratings is itself costing ratings</h3>
+    <p id="f6"></p>
+    <div id="f6q"></div>
+  </div>
+
+  <div class="finding">
+    <h3>What people who like the app still ask for</h3>
+    <p id="f7"></p>
+    <div class="two">
+      <div class="fig"><div class="fig-title">Requests by name, all star levels</div><div class="rows" id="asks"></div><p class="fig-note" id="asks-note"></p></div>
+      <div class="fig"><div class="fig-title">The other listings</div><div class="scroll"><table id="others"></table></div><p class="fig-note" id="others-note"></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="stack-lg" id="pulse">
+  <div class="stack">
+    <h2>Keeping the answer current</h2>
+    <p>This question will be asked again, so the answer is a program, not a document. One command reads the newest reviews and the listing, tags each review with a reason, and rebuilds this page and a one-screen digest. A scheduled job runs it every Monday.</p>
+    <pre>python -m pulse run</pre>
+  </div>
+  <div class="two">
+    <div class="fig"><div class="fig-title">What this week's digest would flag</div><ul class="alerts" id="alerts"></ul></div>
+    <div class="fig"><div class="fig-title">What it watches</div>
+      <div class="scroll"><table id="watch"></table></div></div>
+  </div>
+</section>
+
+<section class="stack" id="method">
+  <h2>How these numbers were made, and where they are weak</h2>
+  <div id="method-body" class="stack"></div>
+</section>
+
+<footer id="foot"></footer>
+</div>
+
+<script>
+const M = /*__METRICS__*/null;
+const REPO = "__REPO_URL__";
+(function(){
+"use strict";
+const $ = id => document.getElementById(id);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+const pct = (x, d) => x == null ? "n/a" : (x * 100).toFixed(d == null ? 0 : d) + "%";
+const num = x => x == null ? "n/a" : Number(x).toLocaleString("en-US");
+const f2 = x => x == null ? "n/a" : Number(x).toFixed(2);
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const monthName = m => { const [y, mo] = m.split("-"); return ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][+mo - 1] + " " + y; };
+const dateName = d => { const [y, mo, da] = d.split("-"); return (+da) + " " + ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][+mo - 1] + " " + y; };
+const SVG = "http://www.w3.org/2000/svg";
+const s = (tag, attrs, text) => { const e = document.createElementNS(SVG, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; return e; };
+const theme = k => M.themes.find(t => t.key === k);
+const group = g => M.groups.find(x => x.group === g);
+const L = M.listing, W = M.windows, O = M.owners.last_12m, R = M.replies, P = M.layers.peer_level, LS = M.low_star;
+const OWNER_COLOR = {"App engineering": "--accent", "Product decisions": "--s2", "Ride operations": "--s3", "No detail given": "--deemph"};
+
+/* ---------- answer ---------- */
+$("eyebrow").textContent = "Independent case study · " + M.app_name + " · reviews to " + dateName(M.as_of);
+$("score").textContent = f2(L.score);
+$("heroto").textContent = "on " + num(L.ratings) + " ratings. It should be about " + f2(P.score_at_peer_level) + ".";
+const access = group("Can't get in or stay in");
+$("lede").textContent = "The gap to the best commute apps is one-star ratings: " + pct(L.one_share, 1) + " of MoveInSync's, against about " + pct(P.peer_one_share, 1) +
+  " for Uber, Rapido and Safetrax. Every one of the " + num(LS.labelled.n) + " low-star reviews written since January 2025 was read and tagged with its reason. Of those that give a reason, " +
+  pct(O.app_side) + " are about the app itself, not the cab. One in four low-star reviewers could not get in: logged out, no OTP, or locked out after an update.";
+const tiles = [
+  ["One-star share of all ratings", pct(L.one_share, 1), "Uber, Rapido, Safetrax: about " + pct(P.peer_one_share, 1)],
+  ["Average of written reviews, last 12 months", f2(W.last_12m.mean), "The year before: " + f2(W.prev_12m.mean)],
+  ["Low-star reviews answered, last 12 months", num(R.last_12m.low_star - R.last_12m.low_star_unanswered) + " of " + num(R.last_12m.low_star), "In " + R.best_year.year + ": " + pct(R.best_year.reply_rate) + " of all reviews"],
+  ["Complaints about the app, not the ride", pct(O.app_side), "Of the " + pct(O.gives_reason) + " of low-star reviews that give a reason"],
+];
+for (const [label, value, ctx] of tiles) { const t = el("div", "tile"); t.append(el("div", "label", label), el("div", "num", value), el("div", "ctx", ctx)); $("tiles").append(t); }
+$("byline").textContent = "The question from MoveInSync's Forward Deployed Engineer brief, answered by __AUTHOR__ from public Play Store data. Not an official MoveInSync page. Generated " + M.generated + ".";
+
+/* ---------- plan ---------- */
+const WIN = {last_90d: "the last 90 days", last_12m: "the last 12 months", labelled: "since January 2025", last_30d: "the last 30 days"};
+const phases = [...new Set(M.plan.map(a => a.phase))];
+const PHASE_NOTE = {"This week": "Stop the bleeding. No roadmap change needed.", "Next 30 days": "Fix the four biggest named causes.", "60 to 90 days": "Design debt and the small listings."};
+for (const ph of phases) {
+  const box = el("div", "phase"); const head = el("div", "phase-head"); head.append(el("h3", null, ph), el("p", "small", PHASE_NOTE[ph] || "")); box.append(head);
+  for (const a of M.plan.filter(x => x.phase === ph)) {
+    const d = el("details", "action"); if (ph === phases[0]) d.open = true;
+    const sum = el("summary"); const title = el("h3", null, a.title);
+    const meta = el("div", "meta"); const own = el("span"); own.append("Owner: ", el("b", null, a.owner)); meta.append(own);
+    const ev = el("span");
+    if (a.evidence.n != null) ev.append("Evidence: ", el("b", null, num(a.evidence.n) + " of " + num(a.evidence.of) + " low-star reviews (" + pct(a.evidence.share) + ")"), ", " + WIN[a.evidence.window]);
+    else if (a.id === "A2") ev.append("Evidence: ", el("b", null, num(R.last_12m.low_star_unanswered) + " of " + num(R.last_12m.low_star) + " low-star reviews unanswered"), ", the last 12 months");
+    else { const oa = M.other_apps.find(o => o.app_id.endsWith("dco")); ev.append("Evidence: ", el("b", null, "Driver Partner rated " + (oa.score != null ? oa.score.toFixed(1) : "n/a") + " on " + num(oa.ratings) + " ratings")); }
+    meta.append(ev);
+    const tog = el("span", "tog"); tog.append(el("span", "o", "Details"), el("span", "c", "Close"));
+    sum.append(el("span", "id", a.id), title, tog, meta); d.append(sum);
+    const body = el("div", "body"); body.append(el("p", null, a.why));
+    const dobox = el("div", "stack"); dobox.style.gap = "6px"; dobox.append(el("div", "k", "Exactly what to change")); const ul = el("ul"); a.do.forEach(x => ul.append(el("li", null, x))); dobox.append(ul); body.append(dobox);
+    const kv = el("div", "kv"); const k1 = el("div"); k1.append(el("div", "k", "Tomorrow morning"), el("div", null, a.tomorrow)); const k2 = el("div"); k2.append(el("div", "k", "Done when"), el("div", null, a.done_when)); kv.append(k1, k2); body.append(kv);
+    d.append(body); box.append(d);
+  }
+  $("phases").append(box);
+}
+$("toggle-all").addEventListener("click", e => { const all = [...document.querySelectorAll("details.action")]; const open = all.some(d => !d.open); all.forEach(d => d.open = open); e.target.textContent = open ? "Close all actions" : "Open all actions"; });
+
+/* ---------- effect ---------- */
+const imp = M.impact || [];
+if (imp.length) {
+  const last = imp[imp.length - 1];
+  $("effect-lede").textContent = "If every action lands, about " + num(last.low_star_avoided_per_year) + " of the " + num(last.of) + " low-star reviews a year are never written, the one-star share falls from " +
+    pct(L.one_share, 1) + " to about " + pct(last.one_star_share, 1) + ", and the public score settles near " + f2(last.score) + ". Answering reviews comes on top of that: Google reports an average lift of 0.7 stars on a negative review that gets a reply.";
+  const t = $("impact"); const hr = el("tr"); [["Scenario", ""], ["Low-star reviews avoided per year", "n"], ["One-star share of ratings", "n"], ["Public score", "n"]].forEach(([h, c]) => hr.append(el("th", c, h))); t.append(hr);
+  const row0 = el("tr"); row0.append(el("td", null, "Today"), el("td", "n", "0 of " + num(last.of)), el("td", "n", pct(L.one_share, 1)), el("td", "n", f2(L.score))); t.append(row0);
+  for (const r of imp) { const tr = el("tr"); tr.append(el("td", null, r.scenario), el("td", "n", num(r.low_star_avoided_per_year)), el("td", "n", pct(r.one_star_share, 1)), el("td", "n", f2(r.score))); t.append(tr); }
+  $("impact-note").textContent = "An estimate, not a forecast. Assumptions: each action prevents a stated share of the reviews that carry its reasons (between 30% and 80%; listed in pulse/plan.py); a review with several complaints is avoided only as far as its least-fixed complaint; reviews that give no reason move at half the average rate; and the one-star ratings without text shrink in the same proportion as one-star reviews. The score shown is where the listing settles once recent ratings reflect the change.";
+}
+
+/* ---------- shared chart helpers ---------- */
+function tipFor(plot) { let t = plot.querySelector(".tip"); if (!t) { t = el("div", "tip"); t.hidden = true; plot.append(t); } return t; }
+function barRows(host, rows, max) {
+  host.textContent = "";
+  for (const r of rows) {
+    const row = el("div", "row" + (r.hl ? " hl" : "")); const track = el("div", "track"); const bar = el("div", "bar");
+    bar.style.width = Math.max(0.5, r.value / max * 100) + "%"; bar.style.background = "var(" + (r.color || "--accent") + ")"; track.append(bar);
+    const val = el("div", "val"); val.append(el("b", null, r.main)); if (r.sub) val.append(" " + r.sub);
+    row.append(el("div", "lab", r.label), track, val); row.title = r.label + ": " + r.main + (r.sub ? " " + r.sub : ""); host.append(row);
+  }
+}
+function lineChart(host, cfg) {
+  const draw = () => {
+    host.querySelectorAll("svg").forEach(x => x.remove());
+    const Wd = Math.max(280, host.clientWidth), H = cfg.height || 230, m = {t: 14, r: cfg.endLabels ? 96 : 16, b: 26, l: 38};
+    const svg = s("svg", {viewBox: `0 0 ${Wd} ${H}`, width: Wd, height: H, role: "img", "aria-label": cfg.label});
+    const n = cfg.x.length, iw = Wd - m.l - m.r, ih = H - m.t - m.b;
+    const X = i => m.l + (n === 1 ? iw / 2 : iw * i / (n - 1)), Y = v => m.t + ih * (1 - (v - cfg.min) / (cfg.max - cfg.min));
+    for (const tk of cfg.ticks) { const y = Y(tk); svg.append(s("line", {x1: m.l, x2: Wd - m.r, y1: y, y2: y, stroke: css("--hair"), "stroke-width": 1})); svg.append(s("text", {x: m.l - 8, y: y + 4, "text-anchor": "end"}, (cfg.tickFmt || cfg.fmt)(tk))); }
+    const step = Math.ceil(n / Math.max(2, Math.floor(iw / 78)));
+    cfg.x.forEach((lab, i) => { if (i % step === 0 || i === n - 1) { if (i !== n - 1 && n - 1 - i < step * 0.6) return; svg.append(s("text", {x: X(i), y: H - 6, "text-anchor": i === n - 1 ? "end" : i === 0 ? "start" : "middle"}, cfg.xfmt(lab))); } });
+    for (const b of (cfg.bands || [])) { const x0 = X(b.from) - 6, x1 = X(b.to) + 6; svg.append(s("rect", {x: x0, y: m.t, width: x1 - x0, height: ih, fill: css("--wash")})); svg.append(s("text", {x: (x0 + x1) / 2, y: m.t + 12, "text-anchor": "middle", class: "lbl"}, b.label)); }
+    cfg.series.forEach(se => {
+      const col = css(se.color); let d = ""; let pen = false;
+      se.values.forEach((v, i) => { if (v == null) { pen = false; return; } d += (pen ? "L" : "M") + X(i).toFixed(1) + " " + Y(v).toFixed(1); pen = true; });
+      if (se.area) { const first = se.values.findIndex(v => v != null), lastI = se.values.length - 1; svg.append(s("path", {d: d + `L${X(lastI)} ${Y(cfg.min)}L${X(first)} ${Y(cfg.min)}Z`, fill: col, "fill-opacity": .1})); }
+      svg.append(s("path", {d, fill: "none", stroke: col, "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round"}));
+      const li = se.values.length - 1; if (se.values[li] != null) { svg.append(s("circle", {cx: X(li), cy: Y(se.values[li]), r: 4.5, fill: col, stroke: css("--surface"), "stroke-width": 2})); if (cfg.endLabels) svg.append(s("text", {x: X(li) + 9, y: Y(se.values[li]) + 4, class: "lbl strong"}, cfg.fmt(se.values[li]))); }
+    });
+    const cross = s("line", {y1: m.t, y2: m.t + ih, stroke: css("--axis"), "stroke-width": 1, visibility: "hidden"}); svg.append(cross);
+    const hit = s("rect", {x: m.l, y: m.t, width: iw, height: ih, fill: "transparent", tabindex: 0}); svg.append(hit); host.prepend(svg);
+    const tip = tipFor(host); let cur = n - 1;
+    const show = i => { cur = Math.max(0, Math.min(n - 1, i)); cross.setAttribute("x1", X(cur)); cross.setAttribute("x2", X(cur)); cross.setAttribute("visibility", "visible"); tip.textContent = ""; tip.append(el("div", null, cfg.xfmt(cfg.x[cur], true)));
+      cfg.series.forEach(se => { const r = el("div"); const k = el("i"); k.style.background = css(se.color); r.append(k, el("b", null, se.values[cur] == null ? "n/a" : cfg.fmt(se.values[cur])), " " + se.name); tip.append(r); });
+      tip.hidden = false; const px = X(cur) / Wd * host.clientWidth; tip.style.left = Math.max(90, Math.min(host.clientWidth - 90, px)) + "px"; tip.style.top = (m.t + 6) + "px"; };
+    const hide = () => { tip.hidden = true; cross.setAttribute("visibility", "hidden"); };
+    hit.addEventListener("pointermove", e => { const r = svg.getBoundingClientRect(); const x = (e.clientX - r.left) / r.width * Wd; show(Math.round((x - m.l) / iw * (n - 1))); });
+    hit.addEventListener("pointerleave", hide); hit.addEventListener("blur", hide); hit.addEventListener("focus", () => show(cur));
+    hit.addEventListener("keydown", e => { if (e.key === "ArrowLeft") { show(cur - 1); e.preventDefault(); } if (e.key === "ArrowRight") { show(cur + 1); e.preventDefault(); } });
+  };
+  draw(); let to; window.addEventListener("resize", () => { clearTimeout(to); to = setTimeout(draw, 120); });
+}
+function table(host, head, rows) { const t = el("table"); const hr = el("tr"); head.forEach((h, i) => hr.append(el("th", i ? "n" : "", h))); t.append(hr); rows.forEach(r => { const tr = el("tr"); r.forEach((c, i) => tr.append(el("td", i ? "n" : "", c))); t.append(tr); }); host.textContent = ""; host.append(t); }
+document.querySelectorAll("[data-table]").forEach(b => b.addEventListener("click", () => { const t = $(b.dataset.table); t.hidden = !t.hidden; b.textContent = t.hidden ? "Table" : "Hide table"; }));
+
+/* ---------- why ---------- */
+$("why-lede").textContent = "Seven findings from " + num(M.corpus.reviews) + " written reviews (" + M.corpus.first.slice(0, 4) + " to " + M.corpus.last.slice(0, 4) + "), the public rating histogram, and same-day figures for five other apps. Reasons come from reading each low-star review; the method and its limits are at the end.";
+
+// 1 benchmark
+const bench = M.benchmark.filter(b => b.app_id === M.app_id || !b.ours).sort((a, b) => a.one_share - b.one_share);
+barRows($("bench"), bench.map(b => ({label: b.name.replace(" (employee app)", ""), value: b.one_share, main: pct(b.one_share, 1), sub: "· " + f2(b.score), color: b.app_id === M.app_id ? "--accent" : "--deemph", hl: b.app_id === M.app_id})), Math.max(...bench.map(b => b.one_share)));
+$("bench-note").textContent = "India listings, " + dateName(L.date) + ". Second figure is the public score.";
+$("f1").textContent = f2(L.score) + " is ahead of Routematic and level with Ola. It is behind Safetrax, Uber and Rapido, and the whole difference is at the bottom of the scale: " + pct(L.one_share, 1) +
+  " of MoveInSync's ratings are one star, where those three sit near " + pct(P.peer_one_share, 1) + ". Take one-star ratings down to that level and the same histogram reads " + f2(P.score_at_peer_level) + ". That is the size of the prize, and it says where to look.";
+
+// 2 layers + monthly
+const lay = M.layers;
+$("f2").textContent = "Written reviews average " + f2(lay.written.mean) + " across all time and " + f2(W.last_12m.mean) + " over the last 12 months, far below the public " + f2(L.score) +
+  ". The difference is star-only ratings, which are almost all five stars" + (lay.silent ? " (roughly " + num(Math.round(lay.silent.n / 1000) * 1000) + " of them, averaging about " + lay.silent.mean.toFixed(1) + ")" : "") +
+  ". Happy users tap and leave: the median five-star review is " + lay.median_chars_by_star_12m[4] + " characters, and " + pct(lay.five_star_three_words_or_less_12m) + " are three words or fewer. Unhappy users explain: the median one-star review is " + lay.median_chars_by_star_12m[0] +
+  " characters. In the last 12 months " + num(LS.last_12m.n) + " people wrote a low-star review. They are a tiny fraction of daily riders, they are the ones a buyer or a new employee reads, and each has told us exactly what went wrong.";
+const mon = M.monthly;
+const mMin = Math.min(3, Math.floor(Math.min(...mon.map(r => r.mean)) * 2) / 2); const mTicks = []; for (let v = mMin; v <= 4.5001; v += 0.5) mTicks.push(v);
+lineChart($("c-month"), {label: "Monthly average rating of written reviews", x: mon.map(r => r.month), series: [{name: "average of written reviews", color: "--accent", values: mon.map(r => r.mean), area: false}], min: mMin, max: 4.5, ticks: mTicks, fmt: v => v.toFixed(2), tickFmt: v => v.toFixed(1), xfmt: (m, long) => long ? monthName(m) : (m.endsWith("-01") ? m.slice(0, 4) : monthName(m).slice(0, 3)), endLabels: true});
+table($("t-month"), ["Month", "Reviews", "Average", "1-star share", "Reply rate"], mon.map(r => [monthName(r.month), num(r.n), f2(r.mean), pct(r.one_share), pct(r.reply_rate)]));
+
+// 3 themes
+const shown = M.themes.filter(t => t.last_12m.n > 0 && t.key !== "other" && t.key !== "positive_text");
+$("themes-title").textContent = "Reasons given in " + num(LS.last_12m.n) + " low-star reviews, last 12 months";
+barRows($("themes"), shown.map(t => ({label: t.label, value: t.last_12m.share, main: pct(t.last_12m.share), sub: "· " + num(t.last_12m.n), color: OWNER_COLOR[t.owner]})), Math.max(...shown.map(t => t.last_12m.share)));
+[["App engineering", "The app is broken"], ["Product decisions", "The app works as designed"], ["Ride operations", "The cab, route, driver, helpdesk"], ["No detail given", "No reason given"]].forEach(([o, text]) => { const sp = el("span"); const i = el("i"); i.style.background = "var(" + OWNER_COLOR[o] + ")"; sp.append(i, text); $("themes-legend").append(sp); });
+const ride = group("The ride itself"), find = group("Can't find or reach my cab");
+$("f3").textContent = pct(O.gives_reason) + " of low-star reviews say why. Of those, " + pct(O.app_side) + " name something in the app and " + pct(O.ride_only) + " are only about the ride. The largest group cannot get in or stay in: " +
+  pct(access.last_12m.share) + " of low-star reviews in the last 12 months and " + pct(access.labelled.share) + " since January 2025. Next come people who cannot find or reach their cab (" + pct(find.last_12m.share) + ") and the ride itself (" + pct(ride.last_12m.share) +
+  "). The app, more than the cab, is what holds the rating down.";
+
+// 4 episodes + versions
+const E = M.episodes; const crashLock = E.months.map((_, i) => E.series.install_integrity[i] + E.series.launch_crash[i]);
+const partial = +M.as_of.slice(8, 10) < 25 && E.months[E.months.length - 1] === M.as_of.slice(0, 7);
+const full = E.months.length - (partial ? 1 : 0);   // a month still in progress is left off the chart
+const sorted = [...E.series.login_otp.slice(0, full)].sort((a, b) => a - b); const med = sorted[Math.floor(sorted.length / 2)];
+const peaks = E.months.map((m, i) => [m, E.series.login_otp[i]]).filter(x => x[1] >= 2.5 * med).map(x => monthName(x[0]));
+[["Login, OTP or logged out", "--accent"], ["Lock-out or crash on launch", "--s2"]].forEach(([t, c]) => { const sp = el("span"); const i = el("i", "line"); i.style.background = "var(" + c + ")"; sp.append(i, t); $("epi-legend").append(sp); });
+lineChart($("c-epi"), {label: "Monthly low-star reviews about login and about lock-outs or crashes", x: E.months.slice(0, full), series: [{name: "login, OTP, logged out", color: "--accent", values: E.series.login_otp.slice(0, full)}, {name: "lock-out or crash", color: "--s2", values: crashLock.slice(0, full)}], min: 0, max: Math.ceil(Math.max(...E.series.login_otp, ...crashLock) / 10) * 10, ticks: [0, 10, 20, 30, 40].filter(v => v <= Math.ceil(Math.max(...E.series.login_otp, ...crashLock) / 10) * 10), fmt: v => String(Math.round(v)), xfmt: (m, long) => long ? monthName(m) : (m.endsWith("-01") ? m.slice(0, 4) : monthName(m).slice(0, 3))});
+table($("t-epi"), ["Month", "Low-star reviews", "Login / OTP", "Lock-out", "Crash on launch", "\"New update\" complaints"], E.months.map((m, i) => [monthName(m), num(E.low_n[i]), E.series.login_otp[i], E.series.install_integrity[i], E.series.launch_crash[i], E.series.update_regression[i]]));
+$("epi-note").textContent = "Counts of low-star reviews tagged with each reason." + (partial ? " " + monthName(E.months[E.months.length - 1]) + " is still in progress and is left off the chart; it is in the table." : "");
+const lo = theme("login_otp"), A1 = M.plan.find(a => a.id === "A1");
+$("f4").textContent = "Login is the largest named reason: " + num(lo.labelled.n) + " of " + num(LS.labelled.n) + " low-star reviews since January 2025 (" + pct(lo.labelled.share) + "). It is not a steady drip. A normal month brings about " + med +
+  "; " + peaks.join(", ") + " each brought " + Math.min(...E.series.login_otp.filter(v => v >= 2.5 * med)) + " or more, and reviewers tie the waves to updates. A separate failure is live now. The lock-out that makes people reinstall was close to zero from March 2025 to May 2026 and has returned: lock-outs and launch crashes account for " +
+  num(A1.evidence.n) + " of the " + num(A1.evidence.of) + " low-star reviews in the last 90 days (" + pct(A1.evidence.share) + ").";
+const V = M.versions; const vr = V.rows;
+(function verChart(host) {
+  const draw = () => {
+    host.querySelectorAll("svg").forEach(x => x.remove());
+    const Wd = Math.max(280, host.clientWidth), H = 240, m = {t: 22, r: 14, b: 44, l: 38}, iw = Wd - m.l - m.r, ih = H - m.t - m.b, max = 0.4;
+    const svg = s("svg", {viewBox: `0 0 ${Wd} ${H}`, width: Wd, height: H, role: "img", "aria-label": "One-star share by release"});
+    const Y = v => m.t + ih * (1 - v / max); const band = iw / vr.length, bw = Math.min(24, Math.max(4, band - 2));
+    [0, .1, .2, .3, .4].forEach(tk => { svg.append(s("line", {x1: m.l, x2: Wd - m.r, y1: Y(tk), y2: Y(tk), stroke: css("--hair"), "stroke-width": 1})); svg.append(s("text", {x: m.l - 8, y: Y(tk) + 4, "text-anchor": "end"}, pct(tk))); });
+    const tip = tipFor(host);
+    vr.forEach((v, i) => { const x = m.l + band * i + (band - bw) / 2, y = Y(Math.min(v.one_share, max)), h = Y(0) - y; const hot = v.flag || i === vr.length - 1;
+      const p = s("path", {d: `M${x} ${Y(0)}V${y + 4}Q${x} ${y} ${x + Math.min(4, bw / 2)} ${y}H${x + bw - Math.min(4, bw / 2)}Q${x + bw} ${y} ${x + bw} ${y + 4}V${Y(0)}Z`, fill: css(v.flag ? "--crit" : i === vr.length - 1 ? "--accent" : "--deemph"), tabindex: 0});
+      const showTip = () => { tip.textContent = ""; tip.append(el("div", null, "Release " + v.version + " · first seen " + dateName(v.first_seen))); const r = el("div"); r.append(el("b", null, pct(v.one_share)), " one-star · " + v.n + " reviews · avg " + f2(v.mean)); tip.append(r); tip.hidden = false; tip.style.left = Math.max(110, Math.min(host.clientWidth - 110, (x + bw / 2) / Wd * host.clientWidth)) + "px"; tip.style.top = (y / H * host.clientHeight) + "px"; };
+      p.addEventListener("pointerenter", showTip); p.addEventListener("focus", showTip); p.addEventListener("pointerleave", () => tip.hidden = true); p.addEventListener("blur", () => tip.hidden = true); svg.append(p);
+      if (hot) svg.append(s("text", {x: x + bw / 2, y: y - 6, "text-anchor": i > vr.length - 3 ? "end" : "middle", class: "lbl strong"}, v.version + (i === vr.length - 1 ? " (current)" : "")));
+      if (i === 0 || i === vr.length - 1) svg.append(s("text", {x: i === 0 ? x : x + bw, y: H - 24, "text-anchor": i === 0 ? "start" : "end"}, v.version));
+    });
+    svg.append(s("text", {x: m.l + iw / 2, y: H - 6, "text-anchor": "middle"}, "releases in order, oldest to newest"));
+    const by = Y(V.baseline_one_share_180d); svg.append(s("line", {x1: m.l, x2: Wd - m.r, y1: by, y2: by, stroke: css("--ink2"), "stroke-width": 1})); svg.append(s("text", {x: m.l + 4, y: by - 5, class: "lbl"}, "180-day baseline " + pct(V.baseline_one_share_180d)));
+    host.prepend(svg);
+  };
+  draw(); let to; window.addEventListener("resize", () => { clearTimeout(to); to = setTimeout(draw, 120); });
+})($("c-ver"));
+table($("t-ver"), ["Release", "First seen", "Reviews", "Average", "1-star share", "Flagged"], vr.map(v => [v.version, dateName(v.first_seen), v.n, f2(v.mean), pct(v.one_share), v.flag ? "yes" : ""]));
+const cur = vr[vr.length - 1], shares = vr.map(v => v.one_share);
+$("ver-note").textContent = vr.length + " releases had at least 30 written reviews in the last 12 months, about one every two weeks. One-star share ranged from " + pct(Math.min(...shares)) + " to " + pct(Math.max(...shares)) +
+  ". Red marks a release more than 8 points above the baseline" + (V.flagged.length ? " (" + V.flagged.join(", ") + ")" : "") + ". The current release, " + cur.version + ", is at " + pct(cur.one_share) + " on " + cur.n + " reviews. The Play listing's \"What's new\" field is empty.";
+
+// 5 replies
+const repMon = mon.filter(r => r.month >= "2022-01");
+lineChart($("c-rep"), {label: "Monthly share of reviews with a developer reply", x: repMon.map(r => r.month), series: [{name: "reviews with a reply", color: "--accent", values: repMon.map(r => r.reply_rate), area: true}], min: 0, max: 1, ticks: [0, .25, .5, .75, 1], fmt: v => pct(v), xfmt: (m, long) => long ? monthName(m) : (m.endsWith("-01") ? m.slice(0, 4) : monthName(m).slice(0, 3)), endLabels: true});
+table($("t-rep"), ["Month", "Reviews", "With a reply", "Low-star with a reply"], repMon.map(r => [monthName(r.month), num(r.n), pct(r.reply_rate), pct(r.low_reply_rate)]));
+const wby = R.written_by_year || {}; const y0 = +M.as_of.slice(0, 4);
+$("f5").textContent = "In " + R.best_year.year + ", " + pct(R.best_year.reply_rate) + " of reviews got a developer reply, half of them within " + Math.round(R.best_year.median_hours) + " hours. In July 2024 the replies stop: " +
+  num(wby[R.best_year.year] || 0) + " were written in " + R.best_year.year + ", " + num(wby[y0 - 1] || 0) + " in " + (y0 - 1) + " and " + num(wby[y0] || 0) + " so far in " + y0 + ". In the last 12 months " +
+  num(R.last_12m.low_star_unanswered) + " of " + num(R.last_12m.low_star) + " low-star reviews had no reply to what they wrote. A reply is the only way to reach these users, it is public, and Play invites the reviewer to revise the rating when one arrives.";
+
+// 6 rating ask
+const fr = theme("forced_rating"), tf = theme("trip_feedback");
+$("f6").textContent = num(fr.labelled.n) + " low-star reviews since January 2025 are about being made to rate: a rating screen with no skip that blocks the next trip's details, and repeated requests for a Play Store review. Another " + num(tf.labelled.n) +
+  " are the mirror image: people who wanted to rate or report a trip and could not, including several who say the form accepted only four or five stars. Either way the app's own rating flow is producing one-star ratings on Play, and the second report needs checking before anything else because it bears on how far the in-app numbers can be trusted.";
+if (fr.excerpts && fr.excerpts[0]) { const q = el("p", "quote"); q.append("“" + fr.excerpts[0].text + "” ", el("span", null, "· " + fr.excerpts[0].stars + "-star review, " + dateName(fr.excerpts[0].date))); $("f6q").append(q); }
+
+// 7 asks + others
+const HB = M.happy_but, FA = M.feature_asks;
+$("f7").textContent = "Among " + num(HB.n) + " longer four and five-star reviews from the last 12 months, the most common subject is still tracking (" + (HB.themes[0] ? HB.themes[0][1] : 0) + "), then the interface (" + (HB.themes[1] ? HB.themes[1][1] : 0) +
+  "). The requests below recur across all star levels and are small, concrete and cheap next to the goodwill they buy.";
+barRows($("asks"), FA.rows.filter(r => r[1] >= 3).map(r => ({label: r[0], value: r[1], main: String(r[1]), sub: "reviews", color: "--accent"})), Math.max(...FA.rows.map(r => r[1])));
+$("asks-note").textContent = "Reviews mentioning each request since " + monthName(FA.since.slice(0, 7)) + ", counted by keyword.";
+(function () { const t = $("others"); const hr = el("tr"); ["Listing", "Score", "Ratings", "1-star"].forEach((h, i) => hr.append(el("th", i ? "n" : "", h))); t.append(hr);
+  M.other_apps.forEach(o => { const tr = el("tr"); tr.append(el("td", null, o.name), el("td", "n", o.score == null ? "n/a" : o.score.toFixed(2)), el("td", "n", num(o.ratings)), el("td", "n", pct(o.one_share))); t.append(tr); });
+  M.countries.filter(c => c.country !== "IN").forEach(c => { const tr = el("tr"); tr.append(el("td", null, "Employee app, as shown in " + ({US: "the United States", PH: "the Philippines", GB: "the United Kingdom", ZA: "South Africa"}[c.country] || c.country)), el("td", "n", c.score.toFixed(2)), el("td", "n", "n/a"), el("td", "n", "n/a")); t.append(tr); });
+  $("others-note").textContent = "Play shows a different score in each country. Outside India few people have rated the app, so a handful of ratings sets the number a US or UK buyer sees."; })();
+
+/* ---------- pulse ---------- */
+const AL = M.alerts || [];
+if (!AL.length) $("alerts").append(el("li", null, "Nothing crosses a threshold this week."));
+AL.forEach(a => { const li = el("li"); const f = el("span", "flag", a.level); const d = el("div"); d.append(a.text + " ", el("span", "muted", "Owner: " + a.owner + ".")); li.append(f, d); $("alerts").append(li); });
+(function () { const t = $("watch"); const rows = [["Public score and one-star share", "India and four other country listings, daily snapshot"], ["Flow of new ratings", "Difference between two snapshots, by star"], ["Written reviews", "Average and one-star share, 30 / 90 / 365 days"], ["Reasons", "22 themes, each with an owning team"], ["Releases", "One-star share per version against a 180-day baseline"], ["Replies", "Low-star reviews with no reply after 24 hours"], ["Peers", "Safetrax, Routematic, Uber, Rapido, Ola on the same day"]];
+  const hr = el("tr"); hr.append(el("th", null, "Signal"), el("th", null, "How")); t.append(hr); rows.forEach(r => { const tr = el("tr"); tr.append(el("td", null, r[0]), el("td", null, r[1])); t.append(tr); }); })();
+
+/* ---------- method ---------- */
+const Vd = M.validation;
+const method = [
+  ["Data.", "All " + num(M.corpus.reviews) + " written reviews of the employee app on the India listing, " + dateName(M.corpus.first) + " to " + dateName(M.corpus.last) + ", plus " + num(M.corpus.all_apps - M.corpus.reviews) + " for the three smaller MoveInSync listings. Read from the same public endpoint the Play Store website uses, on " + dateName(L.date) + ". Reviewer names and photos were not collected, and first names in developer-reply greetings are stripped. Reviews in other languages were checked for and are negligible (20 across 12 languages)."],
+  ["Reasons.", "Every low-star review (1 to 3 stars) from 1 January 2025 to " + dateName(M.corpus.last) + ", " + num(LS.labelled.n) + " in all, was read one by one and tagged against a fixed list of 22 reasons, with more than one tag allowed. The reading was done by an AI model (Claude) working through the reviews in batches, not by keyword search; the tags are in data/labels.csv for anyone to audit. Every theme figure for 2025 and 2026 on this page comes from those tags."],
+  ["Classifier.", "For older reviews, four and five-star reviews and future runs, a classifier assigns the tags: readable keyword rules plus a small model trained on the read-and-tagged set. Against those tags in 5-fold cross-validation it scores " + (Vd ? "precision " + Vd.hybrid.precision.toFixed(2) + ", recall " + Vd.hybrid.recall.toFixed(2) + " (rules alone: " + Vd.rules.precision.toFixed(2) + " and " + Vd.rules.recall.toFixed(2) + ")" : "n/a") + ". Login, lock-out and tracking are measured well; fuzzier themes such as driver behaviour are indicative."],
+  ["Limits.", "Reviews are written by a self-selected few; they show what goes wrong, not how often it goes wrong for every rider. Play's public histogram is weighted toward recent ratings, so the split between written and star-only ratings is approximate. The impact table is a scenario built on stated assumptions. There is one listing snapshot so far; the flow of new ratings by star becomes visible from the second run. Crash rates, login success rates and in-app rating data sit inside MoveInSync and would sharpen every action here."],
+];
+method.forEach(([k, v]) => { const p = el("p"); p.append(el("b", null, k + " "), v); $("method-body").append(p); });
+const foot = $("foot"); foot.append("Sources: Google Play listings and reviews for " + M.app_id + " and the apps named above; Google Play Console documentation for the 0.7-star reply figure. ");
+if (REPO) { const a = el("a", null, "Code, tags and method"); a.href = REPO; foot.append(a, "."); }
+})();
+</script>

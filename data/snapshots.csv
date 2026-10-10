@@ -1,0 +1,14 @@
+date,app_id,country,title,score,ratings,reviews,h1,h2,h3,h4,h5,installs,version
+2026-10-10,com.moveinsync.ets,IN,MoveInSync,4.6378484,114835,23617,7336,828,1232,7285,98149,3209106,12.19.0
+2026-10-10,com.moveinsync.driver.lite,IN,Moveinsync Partner - Lite,4.29,701,111,84,21,21,56,518,143072,
+2026-10-10,com.moveinsync.driver.dco,IN,MoveInSync - Driver Partner,3.5,46,7,14,1,3,4,24,19847,
+2026-10-10,field.moveinsync.ets,IN,MoveInSync - Field app,4.0833335,24,8,5,0,1,0,18,6764,1.0.92
+2026-10-10,com.routematic.employee,IN,Routematic,4.34,34890,7165,2670,808,2012,5917,23478,1251751,
+2026-10-10,in.mtap.iincube.safetrax.commuter,IN,Safetrax Commuter,4.72,24141,1645,923,150,311,1999,20755,535244,
+2026-10-10,com.ubercab,IN,Uber,4.73,20075803,987483,737947,156573,333955,1384654,17462663,1173314248,
+2026-10-10,com.olacabs.customer,IN,Ola,4.62,3545627,626749,203767,32743,75220,298971,2934921,255887596,
+2026-10-10,com.rapido.passenger,IN,Rapido,4.72,4925267,638588,191680,35800,83683,351871,4262228,245127121,
+2026-10-10,com.moveinsync.ets,US,MoveInSync,4.32,114835,100,,,,,,,
+2026-10-10,com.moveinsync.ets,PH,MoveInSync,4.49,114835,281,,,,,,,
+2026-10-10,com.moveinsync.ets,GB,MoveInSync,4.49,114835,26,,,,,,,
+2026-10-10,com.moveinsync.ets,ZA,MoveInSync,4.62,114835,180,,,,,,,

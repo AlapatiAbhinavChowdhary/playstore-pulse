@@ -1,0 +1,5 @@
+# Review text is not redistributed. `python -m pulse fetch` rebuilds it from the public store in about three minutes.
+data/reviews.csv
+__pycache__/
+*.pyc
+.venv/

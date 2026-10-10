@@ -1,0 +1,3200 @@
+{
+ "generated": "2026-10-10 13:52 IST",
+ "as_of": "2026-10-09",
+ "app_id": "com.moveinsync.ets",
+ "app_name": "MoveInSync (employee app)",
+ "classifier": "rules + model",
+ "read_and_tagged": 1649,
+ "corpus": {
+  "reviews": 24331,
+  "first": "2014-03-14",
+  "last": "2026-10-09",
+  "all_apps": 24457
+ },
+ "listing": {
+  "date": "2026-10-10",
+  "app_id": "com.moveinsync.ets",
+  "title": "MoveInSync",
+  "score": 4.6378,
+  "ratings": 114835,
+  "reviews": 23617,
+  "histogram": [
+   7336,
+   828,
+   1232,
+   7285,
+   98149
+  ],
+  "installs": 3209106,
+  "version": "12.19.0",
+  "one_share": 0.0639,
+  "five_share": 0.8547
+ },
+ "flow": null,
+ "benchmark": [
+  {
+   "app_id": "com.moveinsync.ets",
+   "name": "MoveInSync (employee app)",
+   "ours": true,
+   "score": 4.6378,
+   "ratings": 114835,
+   "one_share": 0.0639,
+   "histogram": [
+    7336,
+    828,
+    1232,
+    7285,
+    98149
+   ]
+  },
+  {
+   "app_id": "com.moveinsync.driver.lite",
+   "name": "MoveInSync Partner - Lite (driver)",
+   "ours": true,
+   "score": 4.29,
+   "ratings": 701,
+   "one_share": 0.12,
+   "histogram": [
+    84,
+    21,
+    21,
+    56,
+    518
+   ]
+  },
+  {
+   "app_id": "com.moveinsync.driver.dco",
+   "name": "MoveInSync - Driver Partner (onboarding)",
+   "ours": true,
+   "score": 3.5,
+   "ratings": 46,
+   "one_share": 0.3043,
+   "histogram": [
+    14,
+    1,
+    3,
+    4,
+    24
+   ]
+  },
+  {
+   "app_id": "field.moveinsync.ets",
+   "name": "MoveInSync - Field app",
+   "ours": true,
+   "score": 4.0833,
+   "ratings": 24,
+   "one_share": 0.2083,
+   "histogram": [
+    5,
+    0,
+    1,
+    0,
+    18
+   ]
+  },
+  {
+   "app_id": "in.mtap.iincube.safetrax.commuter",
+   "name": "Safetrax Commuter",
+   "ours": false,
+   "score": 4.72,
+   "ratings": 24141,
+   "one_share": 0.0382,
+   "histogram": [
+    923,
+    150,
+    311,
+    1999,
+    20755
+   ]
+  },
+  {
+   "app_id": "com.routematic.employee",
+   "name": "Routematic",
+   "ours": false,
+   "score": 4.34,
+   "ratings": 34890,
+   "one_share": 0.0765,
+   "histogram": [
+    2670,
+    808,
+    2012,
+    5917,
+    23478
+   ]
+  },
+  {
+   "app_id": "com.ubercab",
+   "name": "Uber",
+   "ours": false,
+   "score": 4.73,
+   "ratings": 20075803,
+   "one_share": 0.0368,
+   "histogram": [
+    737947,
+    156573,
+    333955,
+    1384654,
+    17462663
+   ]
+  },
+  {
+   "app_id": "com.rapido.passenger",
+   "name": "Rapido",
+   "ours": false,
+   "score": 4.72,
+   "ratings": 4925267,
+   "one_share": 0.0389,
+   "histogram": [
+    191680,
+    35800,
+    83683,
+    351871,
+    4262228
+   ]
+  },
+  {
+   "app_id": "com.olacabs.customer",
+   "name": "Ola",
+   "ours": false,
+   "score": 4.62,
+   "ratings": 3545627,
+   "one_share": 0.0575,
+   "histogram": [
+    203767,
+    32743,
+    75220,
+    298971,
+    2934921
+   ]
+  }
+ ],
+ "countries": [
+  {
+   "country": "IN",
+   "score": 4.64,
+   "reviews": 23617
+  },
+  {
+   "country": "US",
+   "score": 4.32,
+   "reviews": 100
+  },
+  {
+   "country": "PH",
+   "score": 4.49,
+   "reviews": 281
+  },
+  {
+   "country": "GB",
+   "score": 4.49,
+   "reviews": 26
+  },
+  {
+   "country": "ZA",
+   "score": 4.62,
+   "reviews": 180
+  }
+ ],
+ "layers": {
+  "written": {
+   "n": 24331,
+   "mean": 3.606,
+   "by_star": [
+    6358,
+    1167,
+    1091,
+    2795,
+    12920
+   ]
+  },
+  "silent": {
+   "n": 90838,
+   "mean": 4.904
+  },
+  "text_rate_by_star": [
+   0.867,
+   1.0,
+   0.886,
+   0.384,
+   0.132
+  ],
+  "peer_level": {
+   "peer_one_share": 0.038,
+   "one_star_to_remove": 3094,
+   "score_at_peer_level": 4.739
+  },
+  "median_chars_by_star_12m": [
+   60,
+   81,
+   62,
+   18,
+   11
+  ],
+  "five_star_three_words_or_less_12m": 0.722
+ },
+ "windows": {
+  "last_12m": {
+   "n": 2862,
+   "mean": 3.833,
+   "one_share": 0.24,
+   "low_share": 0.297,
+   "five_share": 0.64
+  },
+  "prev_12m": {
+   "n": 2954,
+   "mean": 3.668,
+   "one_share": 0.268,
+   "low_share": 0.334,
+   "five_share": 0.575
+  },
+  "last_90d": {
+   "n": 723,
+   "mean": 3.806,
+   "one_share": 0.249,
+   "low_share": 0.31,
+   "five_share": 0.65
+  },
+  "last_30d": {
+   "n": 249,
+   "mean": 3.787,
+   "one_share": 0.269,
+   "low_share": 0.305,
+   "five_share": 0.655
+  },
+  "all_time": {
+   "n": 24331,
+   "mean": 3.606,
+   "one_share": 0.261,
+   "low_share": 0.354,
+   "five_share": 0.531
+  }
+ },
+ "monthly": [
+  {
+   "month": "2022-01",
+   "n": 50,
+   "mean": 4.18,
+   "one_share": 0.12,
+   "low_n": 10,
+   "reply_rate": 0.58,
+   "low_reply_rate": 0.5
+  },
+  {
+   "month": "2022-02",
+   "n": 63,
+   "mean": 4.0,
+   "one_share": 0.175,
+   "low_n": 17,
+   "reply_rate": 0.603,
+   "low_reply_rate": 0.706
+  },
+  {
+   "month": "2022-03",
+   "n": 146,
+   "mean": 3.753,
+   "one_share": 0.247,
+   "low_n": 46,
+   "reply_rate": 0.87,
+   "low_reply_rate": 0.696
+  },
+  {
+   "month": "2022-04",
+   "n": 326,
+   "mean": 2.801,
+   "one_share": 0.445,
+   "low_n": 189,
+   "reply_rate": 0.491,
+   "low_reply_rate": 0.296
+  },
+  {
+   "month": "2022-05",
+   "n": 255,
+   "mean": 3.149,
+   "one_share": 0.369,
+   "low_n": 124,
+   "reply_rate": 0.737,
+   "low_reply_rate": 0.548
+  },
+  {
+   "month": "2022-06",
+   "n": 189,
+   "mean": 3.296,
+   "one_share": 0.37,
+   "low_n": 81,
+   "reply_rate": 0.915,
+   "low_reply_rate": 0.877
+  },
+  {
+   "month": "2022-07",
+   "n": 232,
+   "mean": 3.703,
+   "one_share": 0.237,
+   "low_n": 78,
+   "reply_rate": 0.94,
+   "low_reply_rate": 0.885
+  },
+  {
+   "month": "2022-08",
+   "n": 198,
+   "mean": 3.884,
+   "one_share": 0.197,
+   "low_n": 56,
+   "reply_rate": 0.914,
+   "low_reply_rate": 0.786
+  },
+  {
+   "month": "2022-09",
+   "n": 282,
+   "mean": 3.301,
+   "one_share": 0.365,
+   "low_n": 118,
+   "reply_rate": 0.954,
+   "low_reply_rate": 0.958
+  },
+  {
+   "month": "2022-10",
+   "n": 193,
+   "mean": 3.43,
+   "one_share": 0.311,
+   "low_n": 79,
+   "reply_rate": 0.865,
+   "low_reply_rate": 0.848
+  },
+  {
+   "month": "2022-11",
+   "n": 200,
+   "mean": 3.745,
+   "one_share": 0.255,
+   "low_n": 62,
+   "reply_rate": 0.935,
+   "low_reply_rate": 0.887
+  },
+  {
+   "month": "2022-12",
+   "n": 161,
+   "mean": 3.745,
+   "one_share": 0.236,
+   "low_n": 52,
+   "reply_rate": 0.957,
+   "low_reply_rate": 0.942
+  },
+  {
+   "month": "2023-01",
+   "n": 149,
+   "mean": 3.282,
+   "one_share": 0.362,
+   "low_n": 65,
+   "reply_rate": 0.913,
+   "low_reply_rate": 0.862
+  },
+  {
+   "month": "2023-02",
+   "n": 124,
+   "mean": 3.484,
+   "one_share": 0.29,
+   "low_n": 49,
+   "reply_rate": 0.927,
+   "low_reply_rate": 0.878
+  },
+  {
+   "month": "2023-03",
+   "n": 186,
+   "mean": 3.29,
+   "one_share": 0.355,
+   "low_n": 82,
+   "reply_rate": 0.957,
+   "low_reply_rate": 0.927
+  },
+  {
+   "month": "2023-04",
+   "n": 152,
+   "mean": 3.526,
+   "one_share": 0.309,
+   "low_n": 56,
+   "reply_rate": 0.954,
+   "low_reply_rate": 0.964
+  },
+  {
+   "month": "2023-05",
+   "n": 177,
+   "mean": 3.621,
+   "one_share": 0.26,
+   "low_n": 62,
+   "reply_rate": 0.938,
+   "low_reply_rate": 0.887
+  },
+  {
+   "month": "2023-06",
+   "n": 166,
+   "mean": 3.753,
+   "one_share": 0.223,
+   "low_n": 53,
+   "reply_rate": 0.958,
+   "low_reply_rate": 0.943
+  },
+  {
+   "month": "2023-07",
+   "n": 234,
+   "mean": 3.389,
+   "one_share": 0.308,
+   "low_n": 97,
+   "reply_rate": 0.94,
+   "low_reply_rate": 0.938
+  },
+  {
+   "month": "2023-08",
+   "n": 245,
+   "mean": 3.718,
+   "one_share": 0.216,
+   "low_n": 82,
+   "reply_rate": 0.914,
+   "low_reply_rate": 0.89
+  },
+  {
+   "month": "2023-09",
+   "n": 226,
+   "mean": 3.827,
+   "one_share": 0.204,
+   "low_n": 66,
+   "reply_rate": 0.96,
+   "low_reply_rate": 0.924
+  },
+  {
+   "month": "2023-10",
+   "n": 318,
+   "mean": 3.575,
+   "one_share": 0.277,
+   "low_n": 118,
+   "reply_rate": 0.94,
+   "low_reply_rate": 0.898
+  },
+  {
+   "month": "2023-11",
+   "n": 227,
+   "mean": 3.722,
+   "one_share": 0.225,
+   "low_n": 76,
+   "reply_rate": 0.96,
+   "low_reply_rate": 0.934
+  },
+  {
+   "month": "2023-12",
+   "n": 211,
+   "mean": 3.63,
+   "one_share": 0.246,
+   "low_n": 73,
+   "reply_rate": 0.929,
+   "low_reply_rate": 0.945
+  },
+  {
+   "month": "2024-01",
+   "n": 245,
+   "mean": 3.608,
+   "one_share": 0.269,
+   "low_n": 86,
+   "reply_rate": 0.931,
+   "low_reply_rate": 0.884
+  },
+  {
+   "month": "2024-02",
+   "n": 209,
+   "mean": 3.531,
+   "one_share": 0.297,
+   "low_n": 78,
+   "reply_rate": 0.928,
+   "low_reply_rate": 0.897
+  },
+  {
+   "month": "2024-03",
+   "n": 192,
+   "mean": 3.453,
+   "one_share": 0.312,
+   "low_n": 78,
+   "reply_rate": 0.927,
+   "low_reply_rate": 0.897
+  },
+  {
+   "month": "2024-04",
+   "n": 211,
+   "mean": 3.564,
+   "one_share": 0.303,
+   "low_n": 76,
+   "reply_rate": 0.299,
+   "low_reply_rate": 0.263
+  },
+  {
+   "month": "2024-05",
+   "n": 218,
+   "mean": 3.706,
+   "one_share": 0.257,
+   "low_n": 72,
+   "reply_rate": 0.982,
+   "low_reply_rate": 1.0
+  },
+  {
+   "month": "2024-06",
+   "n": 214,
+   "mean": 3.612,
+   "one_share": 0.28,
+   "low_n": 76,
+   "reply_rate": 0.224,
+   "low_reply_rate": 0.224
+  },
+  {
+   "month": "2024-07",
+   "n": 295,
+   "mean": 3.559,
+   "one_share": 0.278,
+   "low_n": 106,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2024-08",
+   "n": 191,
+   "mean": 3.607,
+   "one_share": 0.288,
+   "low_n": 67,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2024-09",
+   "n": 225,
+   "mean": 3.644,
+   "one_share": 0.276,
+   "low_n": 75,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2024-10",
+   "n": 266,
+   "mean": 3.729,
+   "one_share": 0.259,
+   "low_n": 86,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2024-11",
+   "n": 221,
+   "mean": 3.706,
+   "one_share": 0.267,
+   "low_n": 71,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2024-12",
+   "n": 209,
+   "mean": 3.775,
+   "one_share": 0.249,
+   "low_n": 61,
+   "reply_rate": 0.005,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2025-01",
+   "n": 291,
+   "mean": 3.419,
+   "one_share": 0.33,
+   "low_n": 117,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2025-02",
+   "n": 229,
+   "mean": 3.463,
+   "one_share": 0.314,
+   "low_n": 89,
+   "reply_rate": 0.039,
+   "low_reply_rate": 0.045
+  },
+  {
+   "month": "2025-03",
+   "n": 226,
+   "mean": 3.796,
+   "one_share": 0.243,
+   "low_n": 67,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2025-04",
+   "n": 228,
+   "mean": 3.842,
+   "one_share": 0.232,
+   "low_n": 65,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2025-05",
+   "n": 257,
+   "mean": 3.798,
+   "one_share": 0.226,
+   "low_n": 79,
+   "reply_rate": 0.004,
+   "low_reply_rate": 0.013
+  },
+  {
+   "month": "2025-06",
+   "n": 301,
+   "mean": 3.561,
+   "one_share": 0.292,
+   "low_n": 111,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2025-07",
+   "n": 294,
+   "mean": 3.772,
+   "one_share": 0.224,
+   "low_n": 89,
+   "reply_rate": 0.037,
+   "low_reply_rate": 0.124
+  },
+  {
+   "month": "2025-08",
+   "n": 241,
+   "mean": 3.676,
+   "one_share": 0.27,
+   "low_n": 80,
+   "reply_rate": 0.017,
+   "low_reply_rate": 0.05
+  },
+  {
+   "month": "2025-09",
+   "n": 205,
+   "mean": 3.517,
+   "one_share": 0.298,
+   "low_n": 78,
+   "reply_rate": 0.01,
+   "low_reply_rate": 0.026
+  },
+  {
+   "month": "2025-10",
+   "n": 297,
+   "mean": 3.791,
+   "one_share": 0.246,
+   "low_n": 91,
+   "reply_rate": 0.057,
+   "low_reply_rate": 0.077
+  },
+  {
+   "month": "2025-11",
+   "n": 160,
+   "mean": 3.688,
+   "one_share": 0.263,
+   "low_n": 52,
+   "reply_rate": 0.138,
+   "low_reply_rate": 0.154
+  },
+  {
+   "month": "2025-12",
+   "n": 197,
+   "mean": 3.832,
+   "one_share": 0.218,
+   "low_n": 59,
+   "reply_rate": 0.076,
+   "low_reply_rate": 0.085
+  },
+  {
+   "month": "2026-01",
+   "n": 211,
+   "mean": 3.768,
+   "one_share": 0.232,
+   "low_n": 68,
+   "reply_rate": 0.038,
+   "low_reply_rate": 0.044
+  },
+  {
+   "month": "2026-02",
+   "n": 208,
+   "mean": 3.745,
+   "one_share": 0.274,
+   "low_n": 63,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2026-03",
+   "n": 197,
+   "mean": 3.98,
+   "one_share": 0.208,
+   "low_n": 52,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2026-04",
+   "n": 292,
+   "mean": 4.034,
+   "one_share": 0.209,
+   "low_n": 67,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2026-05",
+   "n": 247,
+   "mean": 4.016,
+   "one_share": 0.202,
+   "low_n": 62,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2026-06",
+   "n": 274,
+   "mean": 3.551,
+   "one_share": 0.314,
+   "low_n": 103,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2026-07",
+   "n": 287,
+   "mean": 3.993,
+   "one_share": 0.199,
+   "low_n": 74,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2026-08",
+   "n": 245,
+   "mean": 3.665,
+   "one_share": 0.282,
+   "low_n": 86,
+   "reply_rate": 0.004,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2026-09",
+   "n": 246,
+   "mean": 3.841,
+   "one_share": 0.248,
+   "low_n": 73,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  },
+  {
+   "month": "2026-10",
+   "n": 76,
+   "mean": 3.737,
+   "one_share": 0.289,
+   "low_n": 24,
+   "reply_rate": 0.0,
+   "low_reply_rate": 0.0
+  }
+ ],
+ "yearly": [
+  {
+   "year": 2014,
+   "n": 40,
+   "mean": 2.7,
+   "one_share": 0.5,
+   "reply_rate": 0.425
+  },
+  {
+   "year": 2015,
+   "n": 133,
+   "mean": 2.06,
+   "one_share": 0.481,
+   "reply_rate": 0.805
+  },
+  {
+   "year": 2016,
+   "n": 398,
+   "mean": 2.276,
+   "one_share": 0.497,
+   "reply_rate": 0.462
+  },
+  {
+   "year": 2017,
+   "n": 1146,
+   "mean": 2.558,
+   "one_share": 0.428,
+   "reply_rate": 0.236
+  },
+  {
+   "year": 2018,
+   "n": 2014,
+   "mean": 3.592,
+   "one_share": 0.241,
+   "reply_rate": 0.368
+  },
+  {
+   "year": 2019,
+   "n": 6053,
+   "mean": 3.829,
+   "one_share": 0.203,
+   "reply_rate": 0.226
+  },
+  {
+   "year": 2020,
+   "n": 1135,
+   "mean": 3.605,
+   "one_share": 0.248,
+   "reply_rate": 0.606
+  },
+  {
+   "year": 2021,
+   "n": 797,
+   "mean": 3.946,
+   "one_share": 0.201,
+   "reply_rate": 0.769
+  },
+  {
+   "year": 2022,
+   "n": 2295,
+   "mean": 3.451,
+   "one_share": 0.308,
+   "reply_rate": 0.824
+  },
+  {
+   "year": 2023,
+   "n": 2415,
+   "mean": 3.582,
+   "one_share": 0.268,
+   "reply_rate": 0.941
+  },
+  {
+   "year": 2024,
+   "n": 2696,
+   "mean": 3.626,
+   "one_share": 0.277,
+   "reply_rate": 0.343
+  },
+  {
+   "year": 2025,
+   "n": 2926,
+   "mean": 3.676,
+   "one_share": 0.264,
+   "reply_rate": 0.028
+  },
+  {
+   "year": 2026,
+   "n": 2283,
+   "mean": 3.843,
+   "one_share": 0.242,
+   "reply_rate": 0.004
+  }
+ ],
+ "versions": {
+  "baseline_one_share_180d": 0.25,
+  "rows": [
+   {
+    "version": "12.5",
+    "first_seen": "2025-09-21",
+    "n": 37,
+    "mean": 3.973,
+    "one_share": 0.216,
+    "flag": false
+   },
+   {
+    "version": "12.6",
+    "first_seen": "2025-10-14",
+    "n": 285,
+    "mean": 3.811,
+    "one_share": 0.228,
+    "flag": false
+   },
+   {
+    "version": "12.7",
+    "first_seen": "2025-11-20",
+    "n": 38,
+    "mean": 3.5,
+    "one_share": 0.316,
+    "flag": false
+   },
+   {
+    "version": "12.7.2",
+    "first_seen": "2025-12-01",
+    "n": 94,
+    "mean": 3.617,
+    "one_share": 0.277,
+    "flag": false
+   },
+   {
+    "version": "12.8.2",
+    "first_seen": "2025-12-18",
+    "n": 60,
+    "mean": 4.017,
+    "one_share": 0.133,
+    "flag": false
+   },
+   {
+    "version": "12.8.3",
+    "first_seen": "2026-01-01",
+    "n": 105,
+    "mean": 3.676,
+    "one_share": 0.238,
+    "flag": false
+   },
+   {
+    "version": "12.9.0",
+    "first_seen": "2026-01-17",
+    "n": 31,
+    "mean": 4.548,
+    "one_share": 0.097,
+    "flag": false
+   },
+   {
+    "version": "12.9.2",
+    "first_seen": "2026-01-27",
+    "n": 49,
+    "mean": 3.939,
+    "one_share": 0.224,
+    "flag": false
+   },
+   {
+    "version": "12.9.4",
+    "first_seen": "2026-02-04",
+    "n": 81,
+    "mean": 3.704,
+    "one_share": 0.272,
+    "flag": false
+   },
+   {
+    "version": "12.10",
+    "first_seen": "2026-02-18",
+    "n": 82,
+    "mean": 4.11,
+    "one_share": 0.183,
+    "flag": false
+   },
+   {
+    "version": "12.10.2",
+    "first_seen": "2026-03-03",
+    "n": 100,
+    "mean": 3.89,
+    "one_share": 0.22,
+    "flag": false
+   },
+   {
+    "version": "12.11.0",
+    "first_seen": "2026-03-19",
+    "n": 67,
+    "mean": 4.104,
+    "one_share": 0.194,
+    "flag": false
+   },
+   {
+    "version": "12.11.1",
+    "first_seen": "2026-03-31",
+    "n": 99,
+    "mean": 4.172,
+    "one_share": 0.172,
+    "flag": false
+   },
+   {
+    "version": "12.11.2",
+    "first_seen": "2026-04-10",
+    "n": 144,
+    "mean": 3.979,
+    "one_share": 0.222,
+    "flag": false
+   },
+   {
+    "version": "12.12.0",
+    "first_seen": "2026-04-27",
+    "n": 70,
+    "mean": 3.957,
+    "one_share": 0.229,
+    "flag": false
+   },
+   {
+    "version": "12.12.2",
+    "first_seen": "2026-05-08",
+    "n": 76,
+    "mean": 4.184,
+    "one_share": 0.158,
+    "flag": false
+   },
+   {
+    "version": "12.12.3",
+    "first_seen": "2026-05-15",
+    "n": 112,
+    "mean": 4.018,
+    "one_share": 0.205,
+    "flag": false
+   },
+   {
+    "version": "12.13.0",
+    "first_seen": "2026-05-31",
+    "n": 36,
+    "mean": 3.694,
+    "one_share": 0.278,
+    "flag": false
+   },
+   {
+    "version": "12.13.1",
+    "first_seen": "2026-06-05",
+    "n": 96,
+    "mean": 3.656,
+    "one_share": 0.312,
+    "flag": false
+   },
+   {
+    "version": "12.14.0",
+    "first_seen": "2026-06-22",
+    "n": 38,
+    "mean": 3.368,
+    "one_share": 0.368,
+    "flag": true
+   },
+   {
+    "version": "12.14.1",
+    "first_seen": "2026-06-28",
+    "n": 143,
+    "mean": 3.797,
+    "one_share": 0.252,
+    "flag": false
+   },
+   {
+    "version": "12.15.0",
+    "first_seen": "2026-07-09",
+    "n": 83,
+    "mean": 4.036,
+    "one_share": 0.193,
+    "flag": false
+   },
+   {
+    "version": "12.16.0",
+    "first_seen": "2026-07-23",
+    "n": 89,
+    "mean": 3.865,
+    "one_share": 0.202,
+    "flag": false
+   },
+   {
+    "version": "12.16.1",
+    "first_seen": "2026-07-29",
+    "n": 38,
+    "mean": 3.526,
+    "one_share": 0.342,
+    "flag": true
+   },
+   {
+    "version": "12.17.0",
+    "first_seen": "2026-08-07",
+    "n": 143,
+    "mean": 3.776,
+    "one_share": 0.266,
+    "flag": false
+   },
+   {
+    "version": "12.18.0",
+    "first_seen": "2026-08-22",
+    "n": 66,
+    "mean": 4.106,
+    "one_share": 0.197,
+    "flag": false
+   },
+   {
+    "version": "12.18.1",
+    "first_seen": "2026-09-09",
+    "n": 95,
+    "mean": 3.895,
+    "one_share": 0.242,
+    "flag": false
+   },
+   {
+    "version": "12.19.0",
+    "first_seen": "2026-09-21",
+    "n": 99,
+    "mean": 3.606,
+    "one_share": 0.323,
+    "flag": false
+   }
+  ],
+  "flagged": [
+   "12.14.0",
+   "12.16.1"
+  ]
+ },
+ "low_star": {
+  "last_12m": {
+   "n": 849,
+   "read_share": 1.0
+  },
+  "last_90d": {
+   "n": 224,
+   "read_share": 1.0
+  },
+  "last_30d": {
+   "n": 76,
+   "read_share": 1.0
+  },
+  "prev_12m": {
+   "n": 988,
+   "read_share": 0.81
+  },
+  "labelled": {
+   "n": 1649,
+   "read_share": 1.0,
+   "from": "2025-01-01",
+   "to": "2026-10-09"
+  }
+ },
+ "themes": [
+  {
+   "key": "generic",
+   "label": "Generic verdict, no detail (\"worst app\")",
+   "owner": "No detail given",
+   "last_12m": {
+    "n": 157,
+    "share": 0.185
+   },
+   "last_90d": {
+    "n": 33,
+    "share": 0.147
+   },
+   "last_30d": {
+    "n": 12,
+    "share": 0.158
+   },
+   "prev_12m": {
+    "n": 140,
+    "share": 0.142
+   },
+   "labelled": {
+    "n": 268,
+    "share": 0.163
+   },
+   "excerpts": [
+    {
+     "text": "absolutely rubbishhhhhh and disgusting application",
+     "date": "2026-09-23",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "login_otp",
+   "label": "Login, OTP or being logged out",
+   "owner": "App engineering",
+   "last_12m": {
+    "n": 111,
+    "share": 0.131
+   },
+   "last_90d": {
+    "n": 19,
+    "share": 0.085
+   },
+   "last_30d": {
+    "n": 6,
+    "share": 0.079
+   },
+   "prev_12m": {
+    "n": 160,
+    "share": 0.162
+   },
+   "labelled": {
+    "n": 254,
+    "share": 0.154
+   },
+   "excerpts": [
+    {
+     "text": "... it always shows 'SESSION EXPIRED. YOU ARE UNAUTHORISED. going back in 2seconds'. No location is ...",
+     "date": "2026-06-11",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "booking_schedule",
+   "label": "Booking, schedule, roster or cancellation blocked",
+   "owner": "App engineering",
+   "last_12m": {
+    "n": 76,
+    "share": 0.09
+   },
+   "last_90d": {
+    "n": 20,
+    "share": 0.089
+   },
+   "last_30d": {
+    "n": 3,
+    "share": 0.039
+   },
+   "prev_12m": {
+    "n": 82,
+    "share": 0.083
+   },
+   "labelled": {
+    "n": 141,
+    "share": 0.086
+   },
+   "excerpts": [
+    {
+     "text": "we don't have any edit options",
+     "date": "2026-06-25",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "tracking_eta",
+   "label": "Live tracking, cab location or ETA wrong",
+   "owner": "App engineering",
+   "last_12m": {
+    "n": 70,
+    "share": 0.082
+   },
+   "last_90d": {
+    "n": 19,
+    "share": 0.085
+   },
+   "last_30d": {
+    "n": 7,
+    "share": 0.092
+   },
+   "prev_12m": {
+    "n": 107,
+    "share": 0.108
+   },
+   "labelled": {
+    "n": 150,
+    "share": 0.091
+   },
+   "excerpts": [
+    {
+     "text": "when we have zoomed in the map to track a vehicle what's the necessity to ...",
+     "date": "2026-08-03",
+     "stars": 2
+    }
+   ]
+  },
+  {
+   "key": "support_channel",
+   "label": "Helpdesk unreachable / complaints go nowhere",
+   "owner": "Ride operations",
+   "last_12m": {
+    "n": 64,
+    "share": 0.075
+   },
+   "last_90d": {
+    "n": 19,
+    "share": 0.085
+   },
+   "last_30d": {
+    "n": 7,
+    "share": 0.092
+   },
+   "prev_12m": {
+    "n": 66,
+    "share": 0.067
+   },
+   "labelled": {
+    "n": 121,
+    "share": 0.073
+   },
+   "excerpts": [
+    {
+     "text": "... of the time driver doesn't pick the call. Their customer care is also not easy ...",
+     "date": "2025-12-09",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "ui_ux",
+   "label": "Confusing or hard-to-use interface",
+   "owner": "Product decisions",
+   "last_12m": {
+    "n": 59,
+    "share": 0.069
+   },
+   "last_90d": {
+    "n": 15,
+    "share": 0.067
+   },
+   "last_30d": {
+    "n": 3,
+    "share": 0.039
+   },
+   "prev_12m": {
+    "n": 63,
+    "share": 0.064
+   },
+   "labelled": {
+    "n": 106,
+    "share": 0.064
+   },
+   "excerpts": [
+    {
+     "text": "Worst user interface. App doesn't even load once you login using your official id. It ...",
+     "date": "2026-04-15",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "performance",
+   "label": "Slow, laggy, network or battery heavy",
+   "owner": "App engineering",
+   "last_12m": {
+    "n": 55,
+    "share": 0.065
+   },
+   "last_90d": {
+    "n": 12,
+    "share": 0.054
+   },
+   "last_30d": {
+    "n": 3,
+    "share": 0.039
+   },
+   "prev_12m": {
+    "n": 62,
+    "share": 0.063
+   },
+   "labelled": {
+    "n": 109,
+    "share": 0.066
+   },
+   "excerpts": [
+    {
+     "text": "most of the time app keeps loading even in good internet connectivity.",
+     "date": "2026-06-23",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "routing_pickup",
+   "label": "Route, clubbing, pickup time or pickup point",
+   "owner": "Ride operations",
+   "last_12m": {
+    "n": 52,
+    "share": 0.061
+   },
+   "last_90d": {
+    "n": 16,
+    "share": 0.071
+   },
+   "last_30d": {
+    "n": 3,
+    "share": 0.039
+   },
+   "prev_12m": {
+    "n": 58,
+    "share": 0.059
+   },
+   "labelled": {
+    "n": 97,
+    "share": 0.059
+   },
+   "excerpts": [
+    {
+     "text": "... the teams have coordination, Routing Team is pethic, tracking team and Helpdesk will not help ...",
+     "date": "2026-03-17",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "cab_late_noshow",
+   "label": "Cab late, not assigned, or unfair no-show",
+   "owner": "Ride operations",
+   "last_12m": {
+    "n": 49,
+    "share": 0.058
+   },
+   "last_90d": {
+    "n": 14,
+    "share": 0.062
+   },
+   "last_30d": {
+    "n": 4,
+    "share": 0.053
+   },
+   "prev_12m": {
+    "n": 42,
+    "share": 0.043
+   },
+   "labelled": {
+    "n": 86,
+    "share": 0.052
+   },
+   "excerpts": [
+    {
+     "text": "so much ridiculous app. After 3 no show cab facility nahi milti... shiiii Ganda app",
+     "date": "2026-01-06",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "app_unstable",
+   "label": "\"Not working\", errors, bugs (no specifics)",
+   "owner": "App engineering",
+   "last_12m": {
+    "n": 46,
+    "share": 0.054
+   },
+   "last_90d": {
+    "n": 11,
+    "share": 0.049
+   },
+   "last_30d": {
+    "n": 4,
+    "share": 0.053
+   },
+   "prev_12m": {
+    "n": 115,
+    "share": 0.116
+   },
+   "labelled": {
+    "n": 128,
+    "share": 0.078
+   },
+   "excerpts": [
+    {
+     "text": "... It just says \"Something went wrong\". Tried uninstalling and installing a couple of times but ...",
+     "date": "2026-04-15",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "launch_crash",
+   "label": "App crashes, freezes or will not open",
+   "owner": "App engineering",
+   "last_12m": {
+    "n": 38,
+    "share": 0.045
+   },
+   "last_90d": {
+    "n": 18,
+    "share": 0.08
+   },
+   "last_30d": {
+    "n": 11,
+    "share": 0.145
+   },
+   "prev_12m": {
+    "n": 53,
+    "share": 0.054
+   },
+   "labelled": {
+    "n": 84,
+    "share": 0.051
+   },
+   "excerpts": [
+    {
+     "text": "terrible phone app... keeps hanging",
+     "date": "2026-06-24",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "update_regression",
+   "label": "\"The new update / new UI made it worse\"",
+   "owner": "Product decisions",
+   "last_12m": {
+    "n": 35,
+    "share": 0.041
+   },
+   "last_90d": {
+    "n": 11,
+    "share": 0.049
+   },
+   "last_30d": {
+    "n": 7,
+    "share": 0.092
+   },
+   "prev_12m": {
+    "n": 51,
+    "share": 0.052
+   },
+   "labelled": {
+    "n": 77,
+    "share": 0.047
+   },
+   "excerpts": [
+    {
+     "text": "it was good till 2 days back but now we are not able to see ...",
+     "date": "2026-02-04",
+     "stars": 2
+    }
+   ]
+  },
+  {
+   "key": "trip_info",
+   "label": "Trip details hidden: cab number, co-riders, pickup time, history",
+   "owner": "Product decisions",
+   "last_12m": {
+    "n": 32,
+    "share": 0.038
+   },
+   "last_90d": {
+    "n": 5,
+    "share": 0.022
+   },
+   "last_30d": {
+    "n": 1,
+    "share": 0.013
+   },
+   "prev_12m": {
+    "n": 24,
+    "share": 0.024
+   },
+   "labelled": {
+    "n": 55,
+    "share": 0.033
+   },
+   "excerpts": [
+    {
+     "text": "... drop. the app is not showing pickup timing as well now. only via msg we ...",
+     "date": "2026-02-04",
+     "stars": 2
+    }
+   ]
+  },
+  {
+   "key": "service_vendor",
+   "label": "Service / vendor / employer transport policy in general",
+   "owner": "Ride operations",
+   "last_12m": {
+    "n": 30,
+    "share": 0.035
+   },
+   "last_90d": {
+    "n": 9,
+    "share": 0.04
+   },
+   "last_30d": {
+    "n": 3,
+    "share": 0.039
+   },
+   "prev_12m": {
+    "n": 36,
+    "share": 0.036
+   },
+   "labelled": {
+    "n": 59,
+    "share": 0.036
+   },
+   "excerpts": [
+    {
+     "text": "... it - worst ever employee complaints are ignoring by transportation & Cab owners worst facilities.",
+     "date": "2026-07-16",
+     "stars": 2
+    }
+   ]
+  },
+  {
+   "key": "contact_driver",
+   "label": "Calling or chatting with driver / co-riders fails",
+   "owner": "App engineering",
+   "last_12m": {
+    "n": 27,
+    "share": 0.032
+   },
+   "last_90d": {
+    "n": 4,
+    "share": 0.018
+   },
+   "last_30d": {
+    "n": 2,
+    "share": 0.026
+   },
+   "prev_12m": {
+    "n": 38,
+    "share": 0.038
+   },
+   "labelled": {
+    "n": 57,
+    "share": 0.035
+   },
+   "excerpts": [
+    {
+     "text": "I'm getting calling permission is disabled as per company policy",
+     "date": "2026-08-19",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "notifications",
+   "label": "Notification / alert spam, ads, or missing alerts",
+   "owner": "Product decisions",
+   "last_12m": {
+    "n": 26,
+    "share": 0.031
+   },
+   "last_90d": {
+    "n": 8,
+    "share": 0.036
+   },
+   "last_30d": {
+    "n": 5,
+    "share": 0.066
+   },
+   "prev_12m": {
+    "n": 30,
+    "share": 0.03
+   },
+   "labelled": {
+    "n": 52,
+    "share": 0.032
+   },
+   "excerpts": [
+    {
+     "text": "... keep sends the push notification that trip is not booked. old: Bring monthly view ,not ...",
+     "date": "2026-10-06",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "driver_vehicle",
+   "label": "Driver behaviour, vehicle condition, safety",
+   "owner": "Ride operations",
+   "last_12m": {
+    "n": 25,
+    "share": 0.029
+   },
+   "last_90d": {
+    "n": 7,
+    "share": 0.031
+   },
+   "last_30d": {
+    "n": 2,
+    "share": 0.026
+   },
+   "prev_12m": {
+    "n": 20,
+    "share": 0.02
+   },
+   "labelled": {
+    "n": 42,
+    "share": 0.025
+   },
+   "excerpts": [
+    {
+     "text": "... and management are extremely rude and they talk in an inappropriate and disrespectful manner. Drivers ...",
+     "date": "2026-06-13",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "install_integrity",
+   "label": "\"Not installed from Play Store\" lock-out, forced reinstall",
+   "owner": "App engineering",
+   "last_12m": {
+    "n": 22,
+    "share": 0.026
+   },
+   "last_90d": {
+    "n": 18,
+    "share": 0.08
+   },
+   "last_30d": {
+    "n": 6,
+    "share": 0.079
+   },
+   "prev_12m": {
+    "n": 51,
+    "share": 0.052
+   },
+   "labelled": {
+    "n": 64,
+    "share": 0.039
+   },
+   "excerpts": [
+    {
+     "text": "... open as it is not downloaded from playstore. in last 3 weeks I uninstall an ...",
+     "date": "2026-08-02",
+     "stars": 2
+    }
+   ]
+  },
+  {
+   "key": "permissions_privacy",
+   "label": "Forced permissions, repeated policy pop-up, privacy",
+   "owner": "Product decisions",
+   "last_12m": {
+    "n": 19,
+    "share": 0.022
+   },
+   "last_90d": {
+    "n": 6,
+    "share": 0.027
+   },
+   "last_30d": {
+    "n": 3,
+    "share": 0.039
+   },
+   "prev_12m": {
+    "n": 20,
+    "share": 0.02
+   },
+   "labelled": {
+    "n": 33,
+    "share": 0.02
+   },
+   "excerpts": [
+    {
+     "text": "The transport policy message keeps popping up every time. Even after accepting it many times, ...",
+     "date": "2026-03-30",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "boarding_checkin",
+   "label": "Boarding step: QR scan, trip OTP, seat-belt check, check-in",
+   "owner": "App engineering",
+   "last_12m": {
+    "n": 16,
+    "share": 0.019
+   },
+   "last_90d": {
+    "n": 3,
+    "share": 0.013
+   },
+   "last_30d": {
+    "n": 2,
+    "share": 0.026
+   },
+   "prev_12m": {
+    "n": 20,
+    "share": 0.02
+   },
+   "labelled": {
+    "n": 32,
+    "share": 0.019
+   },
+   "excerpts": [
+    {
+     "text": "it's bad. Sometimes the scan doesn't work, sometimes you can't sign out. it keeps on ...",
+     "date": "2026-04-17",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "forced_rating",
+   "label": "Forced trip rating / nagging for ratings",
+   "owner": "Product decisions",
+   "last_12m": {
+    "n": 16,
+    "share": 0.019
+   },
+   "last_90d": {
+    "n": 5,
+    "share": 0.022
+   },
+   "last_30d": {
+    "n": 2,
+    "share": 0.026
+   },
+   "prev_12m": {
+    "n": 11,
+    "share": 0.011
+   },
+   "labelled": {
+    "n": 27,
+    "share": 0.016
+   },
+   "excerpts": [
+    {
+     "text": "I am forced to rate every trip which is twice a day. There should be ...",
+     "date": "2026-05-19",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "trip_feedback",
+   "label": "No way to rate / report a trip in the app (or low stars blocked)",
+   "owner": "Product decisions",
+   "last_12m": {
+    "n": 16,
+    "share": 0.019
+   },
+   "last_90d": {
+    "n": 6,
+    "share": 0.027
+   },
+   "last_30d": {
+    "n": 2,
+    "share": 0.026
+   },
+   "prev_12m": {
+    "n": 38,
+    "share": 0.038
+   },
+   "labelled": {
+    "n": 49,
+    "share": 0.03
+   },
+   "excerpts": [
+    {
+     "text": "worst app, no feedback option for routing and journey.",
+     "date": "2026-09-29",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "positive_text",
+   "label": "Praise written under a low star (mis-tap or sarcasm)",
+   "owner": "No detail given",
+   "last_12m": {
+    "n": 6,
+    "share": 0.007
+   },
+   "last_90d": {
+    "n": 3,
+    "share": 0.013
+   },
+   "last_30d": {
+    "n": 3,
+    "share": 0.039
+   },
+   "prev_12m": {
+    "n": 10,
+    "share": 0.01
+   },
+   "labelled": {
+    "n": 15,
+    "share": 0.009
+   },
+   "excerpts": []
+  },
+  {
+   "key": "other",
+   "label": "Other / unclassified",
+   "owner": "No detail given",
+   "last_12m": {
+    "n": 6,
+    "share": 0.007
+   },
+   "last_90d": {
+    "n": 1,
+    "share": 0.004
+   },
+   "last_30d": {
+    "n": 0,
+    "share": 0.0
+   },
+   "prev_12m": {
+    "n": 23,
+    "share": 0.023
+   },
+   "labelled": {
+    "n": 12,
+    "share": 0.007
+   },
+   "excerpts": [
+    {
+     "text": "Should be available to Huawei devices",
+     "date": "2026-08-16",
+     "stars": 1
+    }
+   ]
+  },
+  {
+   "key": "workplace_modules",
+   "label": "Non-commute modules: parking, desk, meal, metro",
+   "owner": "Product decisions",
+   "last_12m": {
+    "n": 2,
+    "share": 0.002
+   },
+   "last_90d": {
+    "n": 2,
+    "share": 0.009
+   },
+   "last_30d": {
+    "n": 1,
+    "share": 0.013
+   },
+   "prev_12m": {
+    "n": 7,
+    "share": 0.007
+   },
+   "labelled": {
+    "n": 9,
+    "share": 0.005
+   },
+   "excerpts": []
+  }
+ ],
+ "owners": {
+  "last_12m": {
+   "n": 849,
+   "gives_reason": 0.801,
+   "app_side": 0.784,
+   "ride_only": 0.216,
+   "engineering": 0.597,
+   "product": 0.274,
+   "operations": 0.274
+  },
+  "last_90d": {
+   "n": 224,
+   "gives_reason": 0.835,
+   "app_side": 0.786,
+   "ride_only": 0.214,
+   "engineering": 0.61,
+   "product": 0.278,
+   "operations": 0.283
+  },
+  "last_30d": {
+   "n": 76,
+   "gives_reason": 0.803,
+   "app_side": 0.836,
+   "ride_only": 0.164,
+   "engineering": 0.639,
+   "product": 0.344,
+   "operations": 0.262
+  },
+  "prev_12m": {
+   "n": 988,
+   "gives_reason": 0.825,
+   "app_side": 0.847,
+   "ride_only": 0.153,
+   "engineering": 0.687,
+   "product": 0.261,
+   "operations": 0.222
+  },
+  "labelled": {
+   "n": 1649,
+   "gives_reason": 0.821,
+   "app_side": 0.811,
+   "ride_only": 0.189,
+   "engineering": 0.636,
+   "product": 0.267,
+   "operations": 0.248
+  }
+ },
+ "groups": [
+  {
+   "group": "Can't get in or stay in",
+   "themes": [
+    "login_otp",
+    "install_integrity",
+    "launch_crash",
+    "app_unstable"
+   ],
+   "last_12m": {
+    "n": 208,
+    "share": 0.245
+   },
+   "last_90d": {
+    "n": 64,
+    "share": 0.286
+   },
+   "last_30d": {
+    "n": 26,
+    "share": 0.342
+   },
+   "prev_12m": {
+    "n": 331,
+    "share": 0.335
+   },
+   "labelled": {
+    "n": 478,
+    "share": 0.29
+   }
+  },
+  {
+   "group": "Can't find or reach my cab",
+   "themes": [
+    "tracking_eta",
+    "contact_driver",
+    "trip_info",
+    "boarding_checkin"
+   ],
+   "last_12m": {
+    "n": 138,
+    "share": 0.163
+   },
+   "last_90d": {
+    "n": 31,
+    "share": 0.138
+   },
+   "last_30d": {
+    "n": 12,
+    "share": 0.158
+   },
+   "prev_12m": {
+    "n": 174,
+    "share": 0.176
+   },
+   "labelled": {
+    "n": 277,
+    "share": 0.168
+   }
+  },
+  {
+   "group": "Booking and schedule",
+   "themes": [
+    "booking_schedule"
+   ],
+   "last_12m": {
+    "n": 76,
+    "share": 0.09
+   },
+   "last_90d": {
+    "n": 20,
+    "share": 0.089
+   },
+   "last_30d": {
+    "n": 3,
+    "share": 0.039
+   },
+   "prev_12m": {
+    "n": 82,
+    "share": 0.083
+   },
+   "labelled": {
+    "n": 141,
+    "share": 0.086
+   }
+  },
+  {
+   "group": "Redesign and usability",
+   "themes": [
+    "update_regression",
+    "ui_ux"
+   ],
+   "last_12m": {
+    "n": 85,
+    "share": 0.1
+   },
+   "last_90d": {
+    "n": 23,
+    "share": 0.103
+   },
+   "last_30d": {
+    "n": 9,
+    "share": 0.118
+   },
+   "prev_12m": {
+    "n": 101,
+    "share": 0.102
+   },
+   "labelled": {
+    "n": 162,
+    "share": 0.098
+   }
+  },
+  {
+   "group": "Forced asks",
+   "themes": [
+    "forced_rating",
+    "trip_feedback",
+    "permissions_privacy",
+    "notifications"
+   ],
+   "last_12m": {
+    "n": 75,
+    "share": 0.088
+   },
+   "last_90d": {
+    "n": 23,
+    "share": 0.103
+   },
+   "last_30d": {
+    "n": 11,
+    "share": 0.145
+   },
+   "prev_12m": {
+    "n": 97,
+    "share": 0.098
+   },
+   "labelled": {
+    "n": 157,
+    "share": 0.095
+   }
+  },
+  {
+   "group": "Slow or heavy",
+   "themes": [
+    "performance"
+   ],
+   "last_12m": {
+    "n": 55,
+    "share": 0.065
+   },
+   "last_90d": {
+    "n": 12,
+    "share": 0.054
+   },
+   "last_30d": {
+    "n": 3,
+    "share": 0.039
+   },
+   "prev_12m": {
+    "n": 62,
+    "share": 0.063
+   },
+   "labelled": {
+    "n": 109,
+    "share": 0.066
+   }
+  },
+  {
+   "group": "The ride itself",
+   "themes": [
+    "routing_pickup",
+    "cab_late_noshow",
+    "driver_vehicle",
+    "support_channel",
+    "service_vendor"
+   ],
+   "last_12m": {
+    "n": 186,
+    "share": 0.219
+   },
+   "last_90d": {
+    "n": 53,
+    "share": 0.237
+   },
+   "last_30d": {
+    "n": 16,
+    "share": 0.211
+   },
+   "prev_12m": {
+    "n": 181,
+    "share": 0.183
+   },
+   "labelled": {
+    "n": 336,
+    "share": 0.204
+   }
+  }
+ ],
+ "action_counts": {
+  "last_12m": {
+   "install_integrity+launch_crash": 58,
+   "forced_rating+trip_feedback": 32,
+   "login_otp": 111,
+   "app_unstable+update_regression": 81,
+   "cab_late_noshow+driver_vehicle+routing_pickup+service_vendor+support_channel": 186,
+   "contact_driver+tracking_eta": 95,
+   "booking_schedule+trip_info+ui_ux": 157,
+   "notifications+performance+permissions_privacy": 96
+  },
+  "last_90d": {
+   "install_integrity+launch_crash": 35,
+   "forced_rating+trip_feedback": 11,
+   "login_otp": 19,
+   "app_unstable+update_regression": 22,
+   "cab_late_noshow+driver_vehicle+routing_pickup+service_vendor+support_channel": 53,
+   "contact_driver+tracking_eta": 23,
+   "booking_schedule+trip_info+ui_ux": 38,
+   "notifications+performance+permissions_privacy": 23
+  },
+  "last_30d": {
+   "install_integrity+launch_crash": 16,
+   "forced_rating+trip_feedback": 4,
+   "login_otp": 6,
+   "app_unstable+update_regression": 11,
+   "cab_late_noshow+driver_vehicle+routing_pickup+service_vendor+support_channel": 16,
+   "contact_driver+tracking_eta": 9,
+   "booking_schedule+trip_info+ui_ux": 7,
+   "notifications+performance+permissions_privacy": 9
+  },
+  "prev_12m": {
+   "install_integrity+launch_crash": 99,
+   "forced_rating+trip_feedback": 48,
+   "login_otp": 160,
+   "app_unstable+update_regression": 161,
+   "cab_late_noshow+driver_vehicle+routing_pickup+service_vendor+support_channel": 181,
+   "contact_driver+tracking_eta": 136,
+   "booking_schedule+trip_info+ui_ux": 152,
+   "notifications+performance+permissions_privacy": 109
+  },
+  "labelled": {
+   "install_integrity+launch_crash": 141,
+   "forced_rating+trip_feedback": 75,
+   "login_otp": 254,
+   "app_unstable+update_regression": 202,
+   "cab_late_noshow+driver_vehicle+routing_pickup+service_vendor+support_channel": 336,
+   "contact_driver+tracking_eta": 200,
+   "booking_schedule+trip_info+ui_ux": 280,
+   "notifications+performance+permissions_privacy": 187
+  }
+ },
+ "impact": [
+  {
+   "scenario": "This week",
+   "low_star_avoided_per_year": 61,
+   "of": 849,
+   "one_star_cut": 0.061,
+   "one_star_share": 0.0602,
+   "score": 4.652
+  },
+  {
+   "scenario": "Plus next 30 days",
+   "low_star_avoided_per_year": 246,
+   "of": 849,
+   "one_star_cut": 0.288,
+   "one_star_share": 0.0463,
+   "score": 4.706
+  },
+  {
+   "scenario": "Whole plan",
+   "low_star_avoided_per_year": 358,
+   "of": 849,
+   "one_star_cut": 0.409,
+   "one_star_share": 0.0387,
+   "score": 4.736
+  }
+ ],
+ "plan": [
+  {
+   "id": "A1",
+   "phase": "This week",
+   "owner": "Android lead",
+   "title": "Hotfix the \"not installed from Play Store\" lock-out and the launch crashes",
+   "themes": [
+    "install_integrity",
+    "launch_crash"
+   ],
+   "avoidable": 0.8,
+   "evidence_window": "last_90d",
+   "why": "A new failure is live right now. From March 2025 to May 2026 this lock-out was almost absent; since versions 12.16 to 12.19 it is back, and together with launch crashes it is the largest current reason for a low rating. People say the app claims it was not installed from Play Store, refuses to open, and only a reinstall brings it back, until it happens again a few days later. Several say it starts two to three days after an install or update, which points at a cached verdict or licence check expiring rather than at the install itself. Reviewers name OnePlus 12, Pixel 8 on Android 17, Vivo V25 Pro and Samsung S22+.",
+   "do": [
+    "Open Play Console > Android vitals. Pull crash and ANR clusters for 12.16.0 to 12.20.0, split by Android version and device model.",
+    "Find the installer-source / Play Integrity check behind that error text. Make it fail open: on a failed or inconclusive verdict, retry in the background and let the user in. Log the verdict to the server; never block and never ask for a reinstall.",
+    "Test the auto-update path (update while logged in, then cold start) on Android 15, 16 and 17.",
+    "Ship as a staged rollout: 10% > 50% > 100%, halting if crash-free sessions drop under 99.5%.",
+    "Reply to every reviewer who reported it with the version that fixes it."
+   ],
+   "tomorrow": "Run: python -m pulse show install_integrity --since 2026-06-01. That prints the repro list: dates, versions, devices, the user's own words. Then reproduce by updating 12.15 to 12.19 through Play on a Pixel 8.",
+   "done_when": "No new review in this theme for 30 days, and crash-free users at or above 99.5% on the newest Android version.",
+   "evidence": {
+    "window": "last_90d",
+    "n": 35,
+    "of": 224,
+    "share": 0.156
+   }
+  },
+  {
+   "id": "A2",
+   "phase": "This week",
+   "owner": "Support lead",
+   "title": "Answer every 1 to 3 star review within 24 hours",
+   "themes": [],
+   "avoidable": 0.0,
+   "evidence_window": "last_12m",
+   "why": "The team used to do this and stopped. In 2023 almost every review got a reply, typically within 15 hours. Since July 2024 almost none do. The few replies still going out are short templates. A brief restart in late 2025 answered about eighty reviews and lapsed, which says this needs an owner and a queue, not a campaign. Google's own figure is that replying to a negative review lifts that rating by 0.7 stars on average, and it costs no engineering time.",
+   "do": [
+    "Name one owner and a daily 15-minute queue. The weekly digest lists every unanswered low-star review.",
+    "Write eight reply templates, one per major theme, that (1) name the specific problem, (2) say what the user can do today, (3) say which version fixes it. Retire \"please contact your transport manager\" as a standalone answer.",
+    "When a fix ships, reply again on the reviews that reported that problem. Play notifies the reviewer and invites them to update the rating.",
+    "Later: draft replies automatically from the theme and have a person approve them through the Play Developer Reply API."
+   ],
+   "tomorrow": "Two people, one day: reply to the low-star reviews of the last 90 days, lock-out and login first because there is a concrete workaround to give.",
+   "done_when": "95% of low-star reviews answered within 24 hours, every week.",
+   "evidence": {
+    "window": "last_12m",
+    "n": null,
+    "of": 849,
+    "share": null
+   }
+  },
+  {
+   "id": "A3",
+   "phase": "This week",
+   "owner": "Product manager, rider app",
+   "title": "Let people skip the trip rating, and stop asking for Play reviews after every ride",
+   "themes": [
+    "forced_rating",
+    "trip_feedback"
+   ],
+   "avoidable": 0.8,
+   "evidence_window": "last_12m",
+   "why": "This is the one complaint that is literally about ratings. People write that they came to give one star because the app would not let them see their next cab until they rated the last one. Others report the opposite problem: no way to rate or report a bad trip later, and a form that only accepts 4 or 5 stars. Both break trust in the number.",
+   "do": [
+    "Add Skip. Never put trip details, the boarding OTP or tracking behind a rating screen.",
+    "Accept all five stars with reason chips, and allow rating or reporting a trip from trip history for 48 hours.",
+    "Ask for a Play Store review only through Google's In-App Review API, after an objectively good trip (on-time pickup, no issue raised), at most once a quarter per person. Remove custom \"rate us\" pop-ups."
+   ],
+   "tomorrow": "If the rating wall is server-configured, switch it off behind a flag today. Then verify the reports of low stars being rejected - if true, fix it before anything else on this list.",
+   "done_when": "No new review in this theme for 30 days; in-app trip-rating response rate holds within 10% of today.",
+   "evidence": {
+    "window": "last_12m",
+    "n": 32,
+    "of": 849,
+    "share": 0.038
+   }
+  },
+  {
+   "id": "B1",
+   "phase": "Next 30 days",
+   "owner": "Platform / auth team",
+   "title": "Make sessions last and OTPs arrive",
+   "themes": [
+    "login_otp"
+   ],
+   "avoidable": 0.7,
+   "evidence_window": "labelled",
+   "why": "Getting logged out, or not getting the OTP, is the single biggest named reason for a low rating. It arrives in bursts that follow releases: January-February 2025, June 2025 and October 2025 each brought three to four times the usual monthly count. A commuter standing at a pickup point at 4 a.m. who cannot log in cannot see the cab number, the driver or the boarding OTP.",
+   "do": [
+    "Refresh-token sessions that survive restarts, network drops and app updates. Re-authenticate at most every 30 days, or as the customer's SSO policy requires.",
+    "Never log out on a failed network call. Reviews describe being logged out by a tunnel or a basement car park.",
+    "OTP delivery with failover - SMS, WhatsApp, email, voice call - and a delivery-rate dashboard by provider and customer, with alerts.",
+    "Say plainly when a phone number or email is not registered instead of sending nothing.",
+    "Offline trip card: cache the next trip (cab number, driver, pickup time, boarding OTP) so a logged-out or offline user can still board.",
+    "Add login success rate to the release gate."
+   ],
+   "tomorrow": "Pull auth logs for the three incident windows: attempts versus successes by app version and customer. Find the session-expiry change that shipped around 13 June 2025.",
+   "done_when": "Login success at or above 99.5%, OTP delivered within 30 seconds at the 95th percentile, and this theme under 5% of low-star reviews.",
+   "evidence": {
+    "window": "labelled",
+    "n": 254,
+    "of": 1649,
+    "share": 0.154
+   }
+  },
+  {
+   "id": "B2",
+   "phase": "Next 30 days",
+   "owner": "Release manager / QA",
+   "title": "Gate releases on the signals that produce 1-star reviews",
+   "themes": [
+    "update_regression",
+    "app_unstable"
+   ],
+   "avoidable": 0.5,
+   "evidence_window": "last_12m",
+   "why": "The app ships roughly every two weeks, and the share of 1-star reviews swings widely from one release to the next. The Play listing's \"What's new\" is empty, so users discover changes by surprise. Each bad release is visible in this data within days.",
+   "do": [
+    "Staged rollout for every release with automatic halt criteria: crash-free sessions, login success, and the 1-star share from this pulse.",
+    "Test matrix that includes the next Android version before it ships, and the ten most-used devices.",
+    "UI changes behind flags, offered first as an opt-in beta to two or three customers.",
+    "Write real release notes on Play for every release.",
+    "Run the pulse daily for seven days after each release."
+   ],
+   "tomorrow": "Add the release table from this page to the release checklist, and write \"What's new\" for the build going out now.",
+   "done_when": "No release with a 1-star share more than 8 points above the trailing baseline.",
+   "evidence": {
+    "window": "last_12m",
+    "n": 81,
+    "of": 849,
+    "share": 0.095
+   }
+  },
+  {
+   "id": "B3",
+   "phase": "Next 30 days",
+   "owner": "Product + customer operations",
+   "title": "Give ride complaints a home inside the app",
+   "themes": [
+    "routing_pickup",
+    "cab_late_noshow",
+    "driver_vehicle",
+    "support_channel",
+    "service_vendor"
+   ],
+   "avoidable": 0.3,
+   "evidence_window": "last_12m",
+   "why": "About one low-star review in five is about the ride, not the app: a late cab, a long route, a rude driver, a no-show marked unfairly, a helpdesk that does not pick up. Several say outright they are writing on Play Store because there is nowhere else. The app cannot fix a late cab, but it can make sure the complaint reaches someone who can.",
+   "do": [
+    "\"Report a problem with this trip\" on the trip card and in history: late, wrong route, driver, no-show dispute, safety.",
+    "Route it to the customer's transport desk with an SLA timer, and show the employee the status.",
+    "No-show disputes carry the GPS trail automatically, so the decision is quick and fair.",
+    "When the helpdesk line is busy, offer a callback instead of a dead end.",
+    "Show booking rules in the app where they bite (\"bookings close 8 hours before the shift, set by your employer\")."
+   ],
+   "tomorrow": "List the feedback endpoints that already exist, agree the five categories, and mock the entry point on trip history.",
+   "done_when": "Ride-only complaints fall below 12% of low-star reviews; median first response on a trip issue under 30 minutes.",
+   "evidence": {
+    "window": "last_12m",
+    "n": 186,
+    "of": 849,
+    "share": 0.219
+   }
+  },
+  {
+   "id": "B4",
+   "phase": "Next 30 days",
+   "owner": "Maps / tracking team",
+   "title": "Make live tracking believable",
+   "themes": [
+    "tracking_eta",
+    "contact_driver"
+   ],
+   "avoidable": 0.5,
+   "evidence_window": "last_12m",
+   "why": "Tracking is what people open the app for, and it is the subject four and five-star reviewers mention most. The complaints are consistent: the map zooms out on its own every few seconds, the cab icon sits still for minutes, the ETA jumps from 5 minutes to 30, and the call-driver button does not connect.",
+   "do": [
+    "Stop resetting the zoom after the user has zoomed in. The smallest change on this list and one of the most cited.",
+    "Show how old the position is (\"updated 40s ago\") and grey out a stale cab instead of showing a wrong one.",
+    "Smooth the ETA, and show how many pickups remain before mine.",
+    "Push \"cab is 5 minutes away\" and \"cab has arrived\" with sound.",
+    "Detect a driver app that has been force-stopped (no heartbeat) and tell the rider and the transport desk.",
+    "Fix call-driver, and add quick messages for when a call cannot connect."
+   ],
+   "tomorrow": "Ship the zoom fix.",
+   "done_when": "Tracking under 5% of low-star reviews; ETA within 5 minutes for 80% of pickups.",
+   "evidence": {
+    "window": "last_12m",
+    "n": 95,
+    "of": 849,
+    "share": 0.112
+   }
+  },
+  {
+   "id": "C1",
+   "phase": "60 to 90 days",
+   "owner": "Product design",
+   "title": "Pay back the redesign debt",
+   "themes": [
+    "ui_ux",
+    "trip_info",
+    "booking_schedule"
+   ],
+   "avoidable": 0.4,
+   "evidence_window": "last_12m",
+   "why": "Reviewers say the new interface removed or hid things they relied on: who else is in the cab and in what order, the pickup time, the shuttle's position. They also report that booking a shuttle became two steps, that times show no AM or PM, and that editing a booking means cancelling it first.",
+   "do": [
+    "Put co-riders, pickup order and pickup time back on the trip card.",
+    "Show AM/PM or a 24-hour clock everywhere a time appears.",
+    "One-step shuttle booking, and edit a booking without cancelling it.",
+    "Dark mode, and a way to message the driver."
+   ],
+   "tomorrow": "Run: python -m pulse show trip_info --since 2026-01-01. It is a short list of things people ask to have back, in their words.",
+   "done_when": "Redesign and usability under 5% of low-star reviews.",
+   "evidence": {
+    "window": "last_12m",
+    "n": 157,
+    "of": 849,
+    "share": 0.185
+   }
+  },
+  {
+   "id": "C2",
+   "phase": "60 to 90 days",
+   "owner": "Product manager, rider app",
+   "title": "Remove the forced asks",
+   "themes": [
+    "permissions_privacy",
+    "notifications",
+    "performance"
+   ],
+   "avoidable": 0.5,
+   "evidence_window": "last_12m",
+   "why": "Small frictions reviewers keep naming: the transport policy to accept on every launch, microphone permission demanded up front, a forced automatic time zone, full-screen banners before the cab details, the same notification ten times a day, and a slow cold start.",
+   "do": [
+    "Ask for policy acceptance once per policy version, not once per launch.",
+    "Ask for the microphone only when a call starts. Do not require automatic time zone.",
+    "Notification preferences, and one notification per event.",
+    "No full-screen banner before trip details. Set a cold-start budget of 2 seconds to the trip card."
+   ],
+   "tomorrow": "Count the taps between opening the app and seeing the cab number on a fresh install.",
+   "done_when": "These themes under 5% of low-star reviews combined.",
+   "evidence": {
+    "window": "last_12m",
+    "n": 96,
+    "of": 849,
+    "share": 0.113
+   }
+  },
+  {
+   "id": "C3",
+   "phase": "60 to 90 days",
+   "owner": "Driver-app product manager",
+   "title": "Fix the small listings, where a handful of reviews decides the score",
+   "themes": [],
+   "avoidable": 0.0,
+   "evidence_window": "last_12m",
+   "why": "The driver onboarding app is rated on a few dozen ratings, the field app on fewer. Drivers report being stuck \"in review\" with no contact, and being unable to upload documents. With so few ratings, fixing and answering a dozen reviews moves the number. The same app also shows a lower score outside India, where few people have rated it.",
+   "do": [
+    "Show onboarding status and the expected wait in the driver app; fix document upload.",
+    "Reply to every review on the three small listings - there are fewer than 130 in total.",
+    "Track the US, Philippines and UK scores in the weekly digest."
+   ],
+   "tomorrow": "Reply to the seven written reviews on the Driver Partner listing.",
+   "done_when": "Driver Partner listing at 4.0 or above.",
+   "evidence": {
+    "window": "last_12m",
+    "n": null,
+    "of": 849,
+    "share": null
+   }
+  }
+ ],
+ "quarterly": {
+  "quarters": [
+   "2023Q1",
+   "2023Q2",
+   "2023Q3",
+   "2023Q4",
+   "2024Q1",
+   "2024Q2",
+   "2024Q3",
+   "2024Q4",
+   "2025Q1",
+   "2025Q2",
+   "2025Q3",
+   "2025Q4",
+   "2026Q1",
+   "2026Q2",
+   "2026Q3",
+   "2026Q4"
+  ],
+  "n": [
+   196,
+   171,
+   245,
+   267,
+   242,
+   224,
+   248,
+   218,
+   273,
+   255,
+   247,
+   202,
+   183,
+   232,
+   233,
+   24
+  ],
+  "read": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "groups": {
+   "Can't get in or stay in": [
+    0.194,
+    0.216,
+    0.163,
+    0.371,
+    0.215,
+    0.232,
+    0.238,
+    0.321,
+    0.491,
+    0.298,
+    0.215,
+    0.282,
+    0.219,
+    0.216,
+    0.258,
+    0.333
+   ],
+   "Can't find or reach my cab": [
+    0.138,
+    0.205,
+    0.216,
+    0.169,
+    0.289,
+    0.192,
+    0.226,
+    0.174,
+    0.19,
+    0.165,
+    0.174,
+    0.183,
+    0.153,
+    0.164,
+    0.133,
+    0.25
+   ],
+   "Booking and schedule": [
+    0.082,
+    0.094,
+    0.09,
+    0.116,
+    0.079,
+    0.089,
+    0.085,
+    0.087,
+    0.081,
+    0.098,
+    0.073,
+    0.099,
+    0.077,
+    0.082,
+    0.09,
+    0.083
+   ],
+   "Redesign and usability": [
+    0.077,
+    0.064,
+    0.114,
+    0.139,
+    0.107,
+    0.103,
+    0.129,
+    0.128,
+    0.088,
+    0.094,
+    0.113,
+    0.084,
+    0.098,
+    0.095,
+    0.099,
+    0.25
+   ],
+   "Forced asks": [
+    0.046,
+    0.047,
+    0.033,
+    0.034,
+    0.054,
+    0.098,
+    0.097,
+    0.092,
+    0.059,
+    0.114,
+    0.138,
+    0.089,
+    0.093,
+    0.073,
+    0.099,
+    0.125
+   ],
+   "Slow or heavy": [
+    0.097,
+    0.058,
+    0.061,
+    0.052,
+    0.066,
+    0.045,
+    0.069,
+    0.069,
+    0.07,
+    0.09,
+    0.045,
+    0.079,
+    0.055,
+    0.073,
+    0.056,
+    0.0
+   ],
+   "The ride itself": [
+    0.153,
+    0.187,
+    0.224,
+    0.139,
+    0.231,
+    0.223,
+    0.226,
+    0.156,
+    0.15,
+    0.188,
+    0.219,
+    0.193,
+    0.202,
+    0.263,
+    0.219,
+    0.208
+   ]
+  }
+ },
+ "episodes": {
+  "months": [
+   "2025-01",
+   "2025-02",
+   "2025-03",
+   "2025-04",
+   "2025-05",
+   "2025-06",
+   "2025-07",
+   "2025-08",
+   "2025-09",
+   "2025-10",
+   "2025-11",
+   "2025-12",
+   "2026-01",
+   "2026-02",
+   "2026-03",
+   "2026-04",
+   "2026-05",
+   "2026-06",
+   "2026-07",
+   "2026-08",
+   "2026-09",
+   "2026-10"
+  ],
+  "low_n": [
+   117,
+   89,
+   67,
+   65,
+   79,
+   111,
+   89,
+   80,
+   78,
+   91,
+   52,
+   59,
+   68,
+   63,
+   52,
+   67,
+   62,
+   103,
+   74,
+   86,
+   73,
+   24
+  ],
+  "series": {
+   "login_otp": [
+    31,
+    30,
+    5,
+    2,
+    7,
+    29,
+    19,
+    9,
+    7,
+    27,
+    5,
+    6,
+    8,
+    13,
+    6,
+    8,
+    10,
+    12,
+    4,
+    5,
+    8,
+    3
+   ],
+   "install_integrity": [
+    16,
+    22,
+    2,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    4,
+    8,
+    5,
+    1
+   ],
+   "launch_crash": [
+    10,
+    9,
+    5,
+    3,
+    7,
+    3,
+    1,
+    3,
+    3,
+    3,
+    2,
+    4,
+    4,
+    2,
+    0,
+    1,
+    2,
+    3,
+    1,
+    7,
+    8,
+    3
+   ],
+   "update_regression": [
+    3,
+    8,
+    5,
+    2,
+    0,
+    6,
+    3,
+    5,
+    9,
+    8,
+    0,
+    0,
+    2,
+    3,
+    0,
+    1,
+    0,
+    7,
+    7,
+    1,
+    1,
+    6
+   ]
+  }
+ },
+ "devices_180d": [
+  [
+   "Oneplus 12",
+   1
+  ],
+  [
+   "Pixel 8",
+   1
+  ],
+  [
+   "Android Version 17",
+   1
+  ],
+  [
+   "Vivo V25 Pro",
+   1
+  ],
+  [
+   "Android 17",
+   1
+  ],
+  [
+   "Oneplus 13",
+   1
+  ],
+  [
+   "Samsung",
+   1
+  ],
+  [
+   "S22+",
+   1
+  ],
+  [
+   "Pixel 6A",
+   1
+  ]
+ ],
+ "replies": {
+  "last_12m": {
+   "reviews": 2862,
+   "replied": 58,
+   "low_star": 849,
+   "low_star_unanswered": 828,
+   "low_reply_rate": 0.025,
+   "stale": 22
+  },
+  "last_reply": "2026-08-18",
+  "written_by_year": {
+   "2014": 23,
+   "2015": 119,
+   "2016": 246,
+   "2017": 315,
+   "2018": 800,
+   "2019": 1491,
+   "2020": 727,
+   "2021": 634,
+   "2022": 2024,
+   "2023": 2356,
+   "2024": 984,
+   "2025": 82,
+   "2026": 9
+  },
+  "best_year": {
+   "year": 2023,
+   "reply_rate": 0.941,
+   "median_hours": 14.9
+  },
+  "unanswered_7d": 21
+ },
+ "happy_but": {
+  "n": 306,
+  "themes": [
+   [
+    "Live tracking, cab location or ETA wrong",
+    64
+   ],
+   [
+    "Confusing or hard-to-use interface",
+    54
+   ],
+   [
+    "Driver behaviour, vehicle condition, safety",
+    19
+   ],
+   [
+    "Route, clubbing, pickup time or pickup point",
+    14
+   ],
+   [
+    "Notification / alert spam, ads, or missing alerts",
+    13
+   ],
+   [
+    "Booking, schedule, roster or cancellation blocked",
+    13
+   ],
+   [
+    "\"Not working\", errors, bugs (no specifics)",
+    11
+   ],
+   [
+    "Calling or chatting with driver / co-riders fails",
+    10
+   ]
+  ]
+ },
+ "feature_asks": {
+  "since": "2025-01-01",
+  "rows": [
+   [
+    "Chat or message the driver",
+    22
+   ],
+   [
+    "Dark mode",
+    18
+   ],
+   [
+    "See co-riders and pickup order",
+    16
+   ],
+   [
+    "Stop the map zooming out",
+    16
+   ],
+   [
+    "Offline trip card",
+    7
+   ],
+   [
+    "Rate or report a trip later",
+    1
+   ]
+  ]
+ },
+ "other_apps": [
+  {
+   "app_id": "com.moveinsync.driver.lite",
+   "name": "MoveInSync Partner - Lite (driver)",
+   "score": 4.29,
+   "ratings": 701,
+   "one_share": 0.12,
+   "written": 111,
+   "written_since_2025": 43
+  },
+  {
+   "app_id": "com.moveinsync.driver.dco",
+   "name": "MoveInSync - Driver Partner (onboarding)",
+   "score": 3.5,
+   "ratings": 46,
+   "one_share": 0.3043,
+   "written": 7,
+   "written_since_2025": 7
+  },
+  {
+   "app_id": "field.moveinsync.ets",
+   "name": "MoveInSync - Field app",
+   "score": 4.0833,
+   "ratings": 24,
+   "one_share": 0.2083,
+   "written": 8,
+   "written_since_2025": 8
+  }
+ ],
+ "validation": {
+  "labelled": 1649,
+  "rules": {
+   "n": 1649,
+   "precision": 0.741,
+   "recall": 0.769,
+   "f1": 0.755
+  },
+  "hybrid": {
+   "n": 1649,
+   "precision": 0.757,
+   "recall": 0.81,
+   "f1": 0.782
+  },
+  "per_theme": {
+   "app_unstable": {
+    "n": 128,
+    "precision": 0.618,
+    "recall": 0.797
+   },
+   "boarding_checkin": {
+    "n": 32,
+    "precision": 0.694,
+    "recall": 0.781
+   },
+   "booking_schedule": {
+    "n": 141,
+    "precision": 0.732,
+    "recall": 0.716
+   },
+   "cab_late_noshow": {
+    "n": 86,
+    "precision": 0.621,
+    "recall": 0.744
+   },
+   "contact_driver": {
+    "n": 57,
+    "precision": 0.816,
+    "recall": 0.702
+   },
+   "driver_vehicle": {
+    "n": 42,
+    "precision": 0.5,
+    "recall": 0.619
+   },
+   "forced_rating": {
+    "n": 27,
+    "precision": 0.833,
+    "recall": 0.741
+   },
+   "generic": {
+    "n": 268,
+    "precision": 0.903,
+    "recall": 0.933
+   },
+   "install_integrity": {
+    "n": 64,
+    "precision": 0.898,
+    "recall": 0.828
+   },
+   "launch_crash": {
+    "n": 84,
+    "precision": 0.728,
+    "recall": 0.798
+   },
+   "login_otp": {
+    "n": 254,
+    "precision": 0.939,
+    "recall": 0.906
+   },
+   "notifications": {
+    "n": 52,
+    "precision": 0.727,
+    "recall": 0.769
+   },
+   "other": {
+    "n": 12,
+    "precision": 0.076,
+    "recall": 0.417
+   },
+   "performance": {
+    "n": 109,
+    "precision": 0.781,
+    "recall": 0.752
+   },
+   "permissions_privacy": {
+    "n": 33,
+    "precision": 0.793,
+    "recall": 0.697
+   },
+   "positive_text": {
+    "n": 15,
+    "precision": 1.0,
+    "recall": 0.8
+   },
+   "routing_pickup": {
+    "n": 97,
+    "precision": 0.745,
+    "recall": 0.784
+   },
+   "service_vendor": {
+    "n": 59,
+    "precision": 0.659,
+    "recall": 0.915
+   },
+   "support_channel": {
+    "n": 121,
+    "precision": 0.816,
+    "recall": 0.843
+   },
+   "tracking_eta": {
+    "n": 150,
+    "precision": 0.771,
+    "recall": 0.853
+   },
+   "trip_feedback": {
+    "n": 49,
+    "precision": 0.833,
+    "recall": 0.714
+   },
+   "trip_info": {
+    "n": 55,
+    "precision": 0.698,
+    "recall": 0.673
+   },
+   "ui_ux": {
+    "n": 106,
+    "precision": 0.719,
+    "recall": 0.774
+   },
+   "update_regression": {
+    "n": 77,
+    "precision": 0.8,
+    "recall": 0.779
+   },
+   "workplace_modules": {
+    "n": 9,
+    "precision": 0.8,
+    "recall": 0.889
+   }
+  }
+ },
+ "alerts": [
+  {
+   "level": "watch",
+   "owner": "Release manager",
+   "text": "Release 12.19.0 is running 7 points above the 1-star baseline (32% vs 25%, 99 reviews)."
+  },
+  {
+   "level": "critical",
+   "owner": "App engineering",
+   "text": "App crashes, freezes or will not open: 11 low-star reviews in the last 30 days, about 3 expected from the year before."
+  },
+  {
+   "level": "critical",
+   "owner": "Product decisions",
+   "text": "\"The new update / new UI made it worse\": 7 low-star reviews in the last 30 days, about 3 expected from the year before."
+  },
+  {
+   "level": "critical",
+   "owner": "App engineering",
+   "text": "\"Not installed from Play Store\" lock-out, forced reinstall: 6 low-star reviews in the last 30 days, about 2 expected from the year before."
+  },
+  {
+   "level": "action",
+   "owner": "Support lead",
+   "text": "21 low-star reviews from the last 7 days have no reply (target: all answered within 24 hours)."
+  }
+ ]
+}
