@@ -1,10 +1,10 @@
 # How are our Play Store ratings? - MoveInSync (employee app)
 
-_Reviews to 2026-10-25. Generated 2026-10-26 14:48 IST by `python -m pulse report`. Do not edit by hand._
+_Reviews to 2026-11-01. Generated 2026-11-02 17:07 IST by `python -m pulse report`. Do not edit by hand._
 
-**4.64 on 115,412 ratings. It should be about 4.74.**
+**4.64 on 115,727 ratings. It should be about 4.74.**
 
-The gap to the best commute apps is one-star ratings: 6.4% of MoveInSync's against about 3.8% for Uber, Rapido and Safetrax. Every one of the 1,641 low-star reviews written since January 2025 was read and tagged. Of those that give a reason, 78% are about the app itself, not the cab. In the last 12 months 817 of 834 low-star reviews got no reply.
+The gap to the best commute apps is one-star ratings: 6.4% of MoveInSync's against about 3.8% for Uber, Rapido and Safetrax. Every one of the 1,641 low-star reviews written since January 2025 was read and tagged. Of those that give a reason, 77% are about the app itself, not the cab. In the last 12 months 800 of 816 low-star reviews got no reply.
 
 ## What to do, in order
 
@@ -13,7 +13,7 @@ The gap to the best commute apps is one-star ratings: 6.4% of MoveInSync's again
 #### A1. Hotfix the "not installed from Play Store" lock-out and the launch crashes
 
 - **Owner:** Android lead
-- **Evidence:** 37 of 221 low-star reviews (17%), the last 90 days
+- **Evidence:** 33 of 214 low-star reviews (15%), the last 90 days
 
 A new failure is live right now. From March 2025 to May 2026 this lock-out was almost absent; since versions 12.16 to 12.19 it is back, and together with launch crashes it is the largest current reason for a low rating. People say the app claims it was not installed from Play Store, refuses to open, and only a reinstall brings it back, until it happens again a few days later. Several say it starts two to three days after an install or update, which points at a cached verdict or licence check expiring rather than at the install itself. Reviewers name OnePlus 12, Pixel 8 on Android 17, Vivo V25 Pro and Samsung S22+.
 
@@ -32,7 +32,7 @@ A new failure is live right now. From March 2025 to May 2026 this lock-out was a
 #### A2. Answer every 1 to 3 star review within 24 hours
 
 - **Owner:** Support lead
-- **Evidence:** 817 of 834 low-star reviews unanswered, the last 12 months
+- **Evidence:** 800 of 816 low-star reviews unanswered, the last 12 months
 
 The team used to do this and stopped. In 2023 almost every review got a reply, typically within 15 hours. Since July 2024 almost none do. The few replies still going out are short templates. A brief restart in late 2025 answered about eighty reviews and lapsed, which says this needs an owner and a queue, not a campaign. Google's own figure is that replying to a negative review lifts that rating by 0.7 stars on average, and it costs no engineering time.
 
@@ -50,7 +50,7 @@ The team used to do this and stopped. In 2023 almost every review got a reply, t
 #### A3. Let people skip the trip rating, and stop asking for Play reviews after every ride
 
 - **Owner:** Product manager, rider app
-- **Evidence:** 32 of 834 low-star reviews (4%), the last 12 months
+- **Evidence:** 32 of 816 low-star reviews (4%), the last 12 months
 
 This is the one complaint that is literally about ratings. People write that they came to give one star because the app would not let them see their next cab until they rated the last one. Others report the opposite problem: no way to rate or report a bad trip later, and a form that only accepts 4 or 5 stars. Both break trust in the number.
 
@@ -89,7 +89,7 @@ Getting logged out, or not getting the OTP, is the single biggest named reason f
 #### B2. Gate releases on the signals that produce 1-star reviews
 
 - **Owner:** Release manager / QA
-- **Evidence:** 81 of 834 low-star reviews (10%), the last 12 months
+- **Evidence:** 75 of 816 low-star reviews (9%), the last 12 months
 
 The app ships roughly every two weeks, and the share of 1-star reviews swings widely from one release to the next. The Play listing's "What's new" is empty, so users discover changes by surprise. Each bad release is visible in this data within days.
 
@@ -108,7 +108,7 @@ The app ships roughly every two weeks, and the share of 1-star reviews swings wi
 #### B3. Give ride complaints a home inside the app
 
 - **Owner:** Product + customer operations
-- **Evidence:** 186 of 834 low-star reviews (22%), the last 12 months
+- **Evidence:** 187 of 816 low-star reviews (23%), the last 12 months
 
 About one low-star review in five is about the ride, not the app: a late cab, a long route, a rude driver, a no-show marked unfairly, a helpdesk that does not pick up. Several say outright they are writing on Play Store because there is nowhere else. The app cannot fix a late cab, but it can make sure the complaint reaches someone who can.
 
@@ -127,7 +127,7 @@ About one low-star review in five is about the ride, not the app: a late cab, a 
 #### B4. Make live tracking believable
 
 - **Owner:** Maps / tracking team
-- **Evidence:** 95 of 834 low-star reviews (11%), the last 12 months
+- **Evidence:** 92 of 816 low-star reviews (11%), the last 12 months
 
 Tracking is what people open the app for, and it is the subject four and five-star reviewers mention most. The complaints are consistent: the map zooms out on its own every few seconds, the cab icon sits still for minutes, the ETA jumps from 5 minutes to 30, and the call-driver button does not connect.
 
@@ -149,7 +149,7 @@ Tracking is what people open the app for, and it is the subject four and five-st
 #### C1. Pay back the redesign debt
 
 - **Owner:** Product design
-- **Evidence:** 155 of 834 low-star reviews (19%), the last 12 months
+- **Evidence:** 152 of 816 low-star reviews (19%), the last 12 months
 
 Reviewers say the new interface removed or hid things they relied on: who else is in the cab and in what order, the pickup time, the shuttle's position. They also report that booking a shuttle became two steps, that times show no AM or PM, and that editing a booking means cancelling it first.
 
@@ -167,7 +167,7 @@ Reviewers say the new interface removed or hid things they relied on: who else i
 #### C2. Remove the forced asks
 
 - **Owner:** Product manager, rider app
-- **Evidence:** 89 of 834 low-star reviews (11%), the last 12 months
+- **Evidence:** 83 of 816 low-star reviews (10%), the last 12 months
 
 Small frictions reviewers keep naming: the transport policy to accept on every launch, microphone permission demanded up front, a forced automatic time zone, full-screen banners before the cab details, the same notification ten times a day, and a slow cold start.
 
@@ -203,41 +203,41 @@ The driver onboarding app is rated on a few dozen ratings, the field app on fewe
 
 | Scenario | Low-star reviews avoided per year | One-star share of ratings | Public score |
 |---|---|---|---|
-| Today | 0 of 834 | 6.4% | 4.64 |
-| This week | 62 | 6.0% | 4.66 |
-| Plus next 30 days | 242 | 4.6% | 4.71 |
-| Whole plan | 351 | 3.9% | 4.74 |
+| Today | 0 of 816 | 6.4% | 4.64 |
+| This week | 64 | 6.0% | 4.66 |
+| Plus next 30 days | 239 | 4.6% | 4.71 |
+| Whole plan | 342 | 3.9% | 4.74 |
 
 An estimate built on stated assumptions (see `pulse/plan.py`), not a forecast. Replies come on top: Google reports an average lift of 0.7 stars on a negative review that gets one.
 
 ## Why people rate 1 to 3 stars
 
-Low-star reviews, last 12 months (n = 834). A review can carry more than one reason.
+Low-star reviews, last 12 months (n = 816). A review can carry more than one reason.
 
 | Reason | Reviews | Share | Owner |
 |---|---|---|---|
-| Generic verdict, no detail ("worst app") | 152 | 18% | No detail given |
-| Login, OTP or being logged out | 103 | 12% | App engineering |
-| Booking, schedule, roster or cancellation blocked | 78 | 9% | App engineering |
-| Live tracking, cab location or ETA wrong | 71 | 8% | App engineering |
-| Helpdesk unreachable / complaints go nowhere | 65 | 8% | Ride operations |
-| Confusing or hard-to-use interface | 56 | 7% | Product decisions |
-| Slow, laggy, network or battery heavy | 52 | 6% | App engineering |
-| Route, clubbing, pickup time or pickup point | 50 | 6% | Ride operations |
-| "Not working", errors, bugs (no specifics) | 47 | 6% | App engineering |
-| Cab late, not assigned, or unfair no-show | 47 | 6% | Ride operations |
-| App crashes, freezes or will not open | 41 | 5% | App engineering |
-| Service / vendor / employer transport policy in general | 35 | 4% | Ride operations |
-| "The new update / new UI made it worse" | 34 | 4% | Product decisions |
-| Trip details hidden: cab number, co-riders, pickup time, history | 32 | 4% | Product decisions |
-| Calling or chatting with driver / co-riders fails | 26 | 3% | App engineering |
-| Notification / alert spam, ads, or missing alerts | 25 | 3% | Product decisions |
-| "Not installed from Play Store" lock-out, forced reinstall | 23 | 3% | App engineering |
-| Driver behaviour, vehicle condition, safety | 21 | 2% | Ride operations |
-| Forced trip rating / nagging for ratings | 16 | 2% | Product decisions |
-| No way to rate / report a trip in the app (or low stars blocked) | 16 | 2% | Product decisions |
-| Forced permissions, repeated policy pop-up, privacy | 16 | 2% | Product decisions |
-| Boarding step: QR scan, trip OTP, seat-belt check, check-in | 14 | 2% | App engineering |
-| Non-commute modules: parking, desk, meal, metro | 2 | 0% | Product decisions |
+| Generic verdict, no detail ("worst app") | 150 | 18% | No detail given |
+| Login, OTP or being logged out | 92 | 11% | App engineering |
+| Booking, schedule, roster or cancellation blocked | 78 | 10% | App engineering |
+| Live tracking, cab location or ETA wrong | 69 | 8% | App engineering |
+| Helpdesk unreachable / complaints go nowhere | 66 | 8% | Ride operations |
+| Confusing or hard-to-use interface | 54 | 7% | Product decisions |
+| Route, clubbing, pickup time or pickup point | 49 | 6% | Ride operations |
+| Cab late, not assigned, or unfair no-show | 48 | 6% | Ride operations |
+| Slow, laggy, network or battery heavy | 47 | 6% | App engineering |
+| "Not working", errors, bugs (no specifics) | 46 | 6% | App engineering |
+| App crashes, freezes or will not open | 42 | 5% | App engineering |
+| Service / vendor / employer transport policy in general | 37 | 4% | Ride operations |
+| Trip details hidden: cab number, co-riders, pickup time, history | 30 | 4% | Product decisions |
+| "The new update / new UI made it worse" | 29 | 4% | Product decisions |
+| "Not installed from Play Store" lock-out, forced reinstall | 24 | 3% | App engineering |
+| Calling or chatting with driver / co-riders fails | 24 | 3% | App engineering |
+| Notification / alert spam, ads, or missing alerts | 23 | 3% | Product decisions |
+| Driver behaviour, vehicle condition, safety | 20 | 2% | Ride operations |
+| No way to rate / report a trip in the app (or low stars blocked) | 17 | 2% | Product decisions |
+| Forced permissions, repeated policy pop-up, privacy | 17 | 2% | Product decisions |
+| Forced trip rating / nagging for ratings | 15 | 2% | Product decisions |
+| Boarding step: QR scan, trip OTP, seat-belt check, check-in | 13 | 2% | App engineering |
+| Non-commute modules: parking, desk, meal, metro | 3 | 0% | Product decisions |
 
 The live page (`docs/index.html`) has the charts, the release table, the reply history and the method.
